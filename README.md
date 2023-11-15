@@ -36,6 +36,12 @@ Login page, Homepage with suggestions or recently listened to, a personal page w
 <UserSavedPlaylists />
 <Footer />
 
+### Mockups
+
+Home Page
+
+'/../assests/HomePage.png'
+
 ## Nice-to-haves
 
 I would love to set up a subscribe ability, and allow users to listen offline, options for content creators to upload and manage podcasts. Push notifications, subscription management, episode streaming and downloading, social media integration,  in app customer support chat, data storage & encryption, AI driven playlist suggestions based on user preferences and listening history, option for continuous playback. Stripe API for user payment
