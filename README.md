@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# PodCast Capstone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+A digital platform that enables users to discover, stream, and download audio episodes on various topics. Users can create playlists, and add likes to their favorite episodes. The app provides a diverse range of content, catering to individual interests and preferences.
 
-## Available Scripts
+### Problem
 
-In the project directory, you can run:
+The current platforms contain podcasts but not one app that specializes in the users experience specifically connecting you with content and other users.
 
-### `npm start`
+### User Profile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Caters to diverse audiences, including anyone on-the-go, commuters, students, and those who prefer content in audible format. This app prioritizes a user-friendly design, user accessibility features, and integrates the abilities to like, share comments and their favorite content with others.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
 
-### `npm test`
+User registration, user profiles, content discovery, playback controls.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Node.js, express.js, MySQL,  Json web tokens, passport.js, React.js 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Firebase, spotify API, apple podcasts API
 
-### `npm run eject`
+### Sitemap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Login page, Homepage with suggestions or recently listened to, a personal page with most recently liked, profile/settings page
+<SearchBar />
+<Header />
+<PodcastList />
+<MediaPlayer />
+<UserAuthentication />
+<UserFavorites />
+<UserSavedPlaylists />
+<Footer />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Nice-to-haves
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I would love to set up a subscribe ability, and allow users to listen offline, options for content creators to upload and manage podcasts. Push notifications, subscription management, episode streaming and downloading, social media integration,  in app customer support chat, data storage & encryption, AI driven playlist suggestions based on user preferences and listening history, option for continuous playback. Stripe API for user payment
