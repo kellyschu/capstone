@@ -38,7 +38,7 @@ Login page, Homepage with suggestions or recently listened to, a personal page w
 
 ### Mockups
 
-![Home Page](./src/assests/HomePageMockup.jpg)
+![Home Page](./src/assests/HomePageMockup.png)
 
 ## Nice-to-haves
 
