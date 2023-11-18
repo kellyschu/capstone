@@ -38,7 +38,17 @@ Login page, Homepage with suggestions or recently listened to, a personal page w
 
 ### Mockups
 
-![Home Page](./src/assests/HomePageMockup.png)
+![Home Page](./src/assests/HOMEPAGE.png)
+![Search Page](./src/assests/SEARCH.png)
+![Your Library](./src/assests/YOURLIBRARY.png)
+![Categories Page](./src/assests/CATEGORIES.png)
+![Most PLayed Page](./src/assests/MOSTPLAYED.png)
+![Most Loved Page](./src/assests/MOSTLOVED.png)
+![Most Talked About Page](./src/assests/MOSTTALKEDABOUT.png)
+![Something New Page](./src/assests/SOMETHINGNEW.png)
+![Episode Page](./src/assests/EPISODEPAGE.png)
+![Episode Page Playing](./src/assests/PLAYEPISODE.png)
+
 
 ## Nice-to-haves
 
