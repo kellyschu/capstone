@@ -1,38 +1,54 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import SideBar from "../src/components/SideBar/SideBar";
-import Header from "../src/components/Header/Header";
-import Footer from "../src/components/Footer/Footer";
-import CategoryPage from './pages/CategoryPage/CategoryPage';
 import EpisodePage from './pages/EpisodePage/EpisodePage';
-import HomePage from './pages/HomePage/HomePage';
-import MostCommentedPage from './pages/MostCommentedPage/MostCommentedPage';
-import MostLovedPage from './pages/MostLovedPage/MostLovedPage';
-import MostPlayedPage from './pages/MostPlayedPage/MostPlayedPage';
-import SearchPage from './pages/SearchPage/SearchPage';
-import SomethingNewPage from './pages/SomethingNewPage/SomethingNewPage';
-import YourLibraryPage from './pages/YourLibraryPage/YourLibraryPage';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+  const apiUrl = "http://localhost:8002";
+  const [episodes, setEpisodes] = useState([]);
+  
+  useEffect(() => {
+    async function getEpisodes() {
+      const response = await axios.get(`${apiUrl}/api/episodes`);
+      setEpisodes(response.data);
+    }
+    getEpisodes();
+  } , []);
+  
+  const [comments, setComments] = useState([]);
+  
+  useEffect(() => {
+    async function getComments() {
+      const response = await axios.get(`${apiUrl}/api/comments`);
+      setComments(response.data);
+    }
+    getComments();
+  } , []);
+
   return (
     <>
-      <Header />
-      <SideBar />
+      {/* <Header /> */}
+      {/* <SideBar /> */}
+      <h1>App</h1>
+      {episodes.map((episode) => (
+            <iframe
+              key={episode.id}
+              title={episode.title}
+              src={`https://open.spotify.com/embed/episode/${episode.id}?utm_source=generator&theme=0`}
+              width="50%"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          ))}
+    
+
       <BrowserRouter>
         <Routes>
-          <Route path="/category" component={CategoryPage} />
-          <Route path="/episode/:channel/:id" component={EpisodePage} />
-          <Route path="/home" component={HomePage} />
-          <Route path="/mostcommented" component={MostCommentedPage} />
-          <Route path="/mostloved" component={MostLovedPage} />
-          <Route path="/mostplayed" component={MostPlayedPage} />
-          <Route path="/search" component={SearchPage} />
-          <Route path="/somethingnew" component={SomethingNewPage} />
-          <Route path="/:username" component={YourLibraryPage} />
-
+          <Route path="/episode/:id" element={<EpisodePage />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
