@@ -16,6 +16,7 @@ function EpisodePage() {
             }
         };
         getEpisode();
+        console.log('Episode:', episode);
     }, [id]);
 
 
@@ -26,7 +27,7 @@ function EpisodePage() {
                     <div key={item.id}>
                         <p>{item.first_name} {item.last_name}</p>
                         <p>{new Date(item.timestamp).toLocaleDateString()}</p>
-                        <p>{item.description}</p>
+                        <p>{item.content}</p>
                     </div>
                 ))}
             </div>
