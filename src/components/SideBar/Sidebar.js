@@ -23,36 +23,36 @@ function Sidebar() {
                     <span class="material-icons-sharp">home</span>
                     <h2>Home</h2>
                 </NavLink>
-                <NavLink exact className="sidebar-selector"  to="/home" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink exact className="sidebar-selector" to="/search" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">search</span>
                     <h2>Search</h2>
                 </NavLink>
 
             </div>
             <div className="sidebar-section">
-                <NavLink exact className="sidebar-selector"  to="/home" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink exact className="sidebar-selector"  to="/user/:id" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">import_contacts</span>
                     <h2>Your Library</h2>
                 </NavLink>
             </div>
             <div className="sidebar-section">
-                <NavLink exact className="sidebar-selector"  to="/home" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink exact className="sidebar-selector"  to="/categories" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">dashboard</span>
                     <h2>Categories</h2>
                 </NavLink>
-                <NavLink className="sidebar-selector"  to="/" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink className="sidebar-selector"  to="/mostplayed" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">access_time_filled</span>
                     <h2>Most Played</h2>
                 </NavLink>
-                <NavLink className="sidebar-selector"  to="/" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink className="sidebar-selector"  to="/mostloved" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">volunteer_activism</span>
                     <h2>Most Loved</h2>
                 </NavLink>
-                <NavLink className="sidebar-selector"  to="/" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink className="sidebar-selector"  to="/mosttalkedabout" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">forum</span>
                     <h2>Most Talked About</h2>
                 </NavLink>
-                <NavLink className="sidebar-selector"  to="/" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink className="sidebar-selector"  to="/somethingnew" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">autorenew</span>
                     <h2>Something New</h2>
                 </NavLink>

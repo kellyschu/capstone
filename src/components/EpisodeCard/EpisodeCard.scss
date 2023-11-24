@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.episode-card {
+    height: 250px;
+    border-radius: 10px;
+    width: 200px;
+    font-size: .8rem;
+    margin: 1rem;
+    background-color: $supporting-blue;
+    color: $background-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1rem;
+    font-weight: 800;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 98%;
+        justify-content: space-around;
+    }
+}
