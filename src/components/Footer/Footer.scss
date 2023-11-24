@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as *;
+// @use 'partials/mixins' as *;' as *;
+// @use 'partials/mixins' as *;
+
+.footer {
+    text-align: center;
+    color: $secondary-slate;
+}
+.display-flex {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 50vw;
+    a {
+        text-decoration: none;   
+        color: $secondary-slate;
+    }
+}
+
