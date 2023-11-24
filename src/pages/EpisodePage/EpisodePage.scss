@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.page {
+    &__display-flex {
+        display: flex;
+        flex-direction: column;
+    }
+    &__main {
+        background-color: $background-grey;
+        border-radius: 25px;
+    }
+}
+iframe {
+    padding: 2rem;
+}
