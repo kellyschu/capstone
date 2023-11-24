@@ -7,8 +7,6 @@ import './EpisodePage.scss'
 function EpisodePage() {
     const [episodeData, setEpisodeData] = useState(null);
     const { id } = useParams();
-    // const apiUrl = "http://localhost:8002";
-    // const [episodes, setEpisodes] = useState([]);
     const [episode, setEpisode] = useState(null);
 
         useEffect(() => {

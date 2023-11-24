@@ -1,5 +1,13 @@
-<NavLink to="/"> Most
-                    {/* <span class="material-icons-sharp">account_circle</span> */}
-                    {/* <h2 className="button__text">Categories</h2> */}
-                    {/* <img src={Logo} alt='InStock-Logo'></img> */}
-                </NavLink>
+import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
+// import "./SearchPage.scss";
+
+function SearchPage() {
+
+    return (
+        <div className="SearchPage-page">
+            <h1>Search Page</h1>
+            <EpisodeCard />
+        </div>
+    );
+}
+export default SearchPage;

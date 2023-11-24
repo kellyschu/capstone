@@ -1,20 +1,23 @@
 import "./EpisodeCard.scss";
-import DisplayComments from "../DisplayComments/DisplayComments";
-import AddComments from "../AddComments/AddComments";
-import AddLikes from "../AddLikes/AddLikes";
+// import placeholder from '../../assets/search.png';
 
-function EpisodeCard() {
+
+function EpisodeCard({ episodes }) {
     return (
-        <div className="EpisodeCard">
-            <img src="https://via.placeholder.com/150" alt="Episode Thumbnail" />
-            <h3>Episode Title</h3>
-            <p>Episode Channel</p>
-            <p>Episode Description</p>
-            <iframe src="https://open.spotify.com/embed/episode/2YXy9XZQs0QMBX1XVXZ6XH" width="100%" height="232" frameBorder="0" allowtransparency="true" title="jsx" allow="encrypted-media"></iframe>
-            <AddLikes />
-            <AddComments />
-            <DisplayComments />
+        <div className="episode-card__container">
+            {episodes ? (
+                Object.values(episodes).slice(0, 5).map((episode) => (
+                    <div className="episode-card" key={episode.id}>
+                        {/* <img src={placeholder} alt="img"/> */}
+                        <h3 className="episode-card__title">{episode.title.substring(0, 43)}{episode.title.length > 40 ? '...' : ''}</h3>
+                        <p>{episode.channel}</p>
+                    </div>
+                ))
+            ) : (
+                <p>Loading episodes...</p>
+            )}
         </div>
     );
 }
+
 export default EpisodeCard;
