@@ -1,4 +1,12 @@
 // iframe {
 //     // width: 50%;
 // }
+@use "../src/styles/partials/variables.scss" as *;
 
+body {
+    background-color: $background-graphite;
+}
+.app-flex {
+    display: flex;
+    
+}

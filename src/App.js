@@ -2,6 +2,7 @@ import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import EpisodePage from './pages/EpisodePage/EpisodePage';
 import Footer from './components/Footer/Footer';
+import Sidebar from './components/SideBar/Sidebar';
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 
@@ -18,17 +19,14 @@ function App() {
   // } , []);
 
   return (
-    <>
-      {/* <Header /> */}
-      {/* <SideBar /> */}
-      <h1>App</h1>
+    <div className="app-flex">
+      <Sidebar />
       <BrowserRouter>
         <Routes>
           <Route path="/episode/:id" element={<EpisodePage />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
-    </>
+    </div>
   );
 }
 

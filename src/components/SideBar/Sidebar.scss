@@ -1,0 +1,49 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.sidebar {
+    padding: .5rem .75rem;
+    @include tablet {
+    width: 34vw;
+    max-width: 300px;
+    display:  flex;
+    flex-direction: column;
+    // height: 200vh;
+    @include desktop {
+        width: 26%;
+        max-width: 340px;
+    }
+        &-section {
+            border-radius: 25px;
+            background-color: $background-grey;
+            color: $supporting-blue;
+            margin: 10px;
+            padding-left: 2.5rem;
+            @include desktop {
+                padding-left: 4.5rem;
+
+            }
+        }
+        h2, h1 {
+            font-size: 1.25rem;
+            padding: .75rem .5rem;
+            @include desktop {
+                font-size: 1.5rem;
+            }
+        }
+        h2 {
+            color: $secondary-cloud;
+            font-weight: 100;
+        }
+        h1 {
+            padding-bottom: 0;
+            padding-top: 0;
+            font-size: 1.5rem;
+            @include desktop {
+                font-size: 2rem;
+            }
+
+        }
+    }
+
+}
