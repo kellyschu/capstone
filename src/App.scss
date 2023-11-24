@@ -5,8 +5,14 @@
 
 body {
     background-color: $background-graphite;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: $secondary-cloud;
 }
 .app-flex {
     display: flex;
     
+}
+h2 {
+    font-weight: 100;
 }
