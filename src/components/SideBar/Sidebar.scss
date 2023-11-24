@@ -2,48 +2,74 @@
 @use "../../styles/partials/mixins" as *;
 
 .sidebar {
-    padding: .5rem .75rem;
+    margin-top: 1rem;
     @include tablet {
-    width: 34vw;
+    width: 35vw;
     max-width: 300px;
     display:  flex;
     flex-direction: column;
-    // height: 200vh;
     @include desktop {
-        width: 26%;
-        max-width: 340px;
+        width: 28%;
+        max-width: 360px;
     }
         &-section {
+            margin: .4rem .7rem;
             border-radius: 25px;
             background-color: $background-grey;
             color: $supporting-blue;
-            margin: 10px;
-            padding-left: 2.5rem;
-            @include desktop {
-                padding-left: 4.5rem;
-
+        }
+        &-selector {
+            display: flex;
+            align-items: baseline;
+            justify-content: start;
+            border-radius: 25px;
+            padding: .25rem;
+            &:active, &:hover, &:target {
+                background-color: #f9f9f9;
+                color: #363636 !important;
+                cursor: pointer;
+                span {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    fill: currentColor;
+                    color: black;
+                }
+            }
+            &__non-active {
+                display: flex;
+                align-items: baseline;
+                justify-content: start;
+                span {
+                    fill: currentColor;
+                    color: $primary-blue;
+                }
             }
         }
+    }
         h2, h1 {
             font-size: 1.25rem;
-            padding: .75rem .5rem;
             @include desktop {
-                font-size: 1.5rem;
-            }
-        }
-        h2 {
-            color: $secondary-cloud;
-            font-weight: 100;
+                font-size: 1.4rem;
+                letter-spacing: -.05rem;
+                        }
         }
         h1 {
             padding-bottom: 0;
             padding-top: 0;
             font-size: 1.5rem;
+            color: $supporting-blue;
             @include desktop {
                 font-size: 2rem;
             }
-
         }
-    }
 
 }
+
+span {
+    padding-left: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: currentColor;
+    color: whitesmoke;
+}
+
