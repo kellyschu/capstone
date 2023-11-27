@@ -1,7 +1,7 @@
 import "./HomePage.scss";
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 
 
@@ -9,32 +9,50 @@ function HomePage() {
     const [episodes, setEpisodes] = useState([]);
 
     useEffect(() => {
-        async function getEpisode() {
-        try {
-            const response = await axios.get(`http://localhost:8002/api/episodes/`);
-            setEpisodes(response.data);
-        } catch (error) {
-            console.error('Error fetching episode:', error);
+        async function getEpisodes() {
+            try {
+                const response = await axios.get(`http://localhost:8002/api/episodes`);
+                setEpisodes(response.data);
+            } catch (error) {
+                console.error('Error fetching episode:', error);
+            }
+        };
+        getEpisodes();
+    }, []);
+
+    const filteredLikedEpisodes = episodes.reduce((acc, episode) => {
+        const existingEpisode = acc.find(item => item.likes === episode.likes);
+        if (existingEpisode) {
+            existingEpisode.count++;
+        } else {
+            acc.push({ ...episode, count: 1 });
         }
-    };
-    getEpisode();
-}, []);
+        return acc;
+    }, []).sort((a, b) => b.likes - a.likes);
+
+    const filteredSavedEpisodes = episodes.reduce((acc, episode) => {
+        const existingEpisode = acc.find(item => item.saves === episode.saves);
+        if (existingEpisode) {
+            existingEpisode.count++;
+        } else {
+            acc.push({ ...episode, count: 1 });
+        }
+        return acc;
+    }, []).sort((a, b) => b.saves - a.saves);
 
     return (
             <section className="page__main">
                 <div className="card__container">
-                    <h3>Crime Podcasts</h3>
+                    <h3>Most Liked Podcasts</h3>
                     <div className="episode-card__container">
-                    <EpisodeCard episodes={episodes}/>
+                    <EpisodeCard episodes={filteredLikedEpisodes}/>
                     </div>
                 </div>
                 <div className="card__container">
-                    <h3>Crime Podcasts</h3>
+                    <h3>Most Saved Podcasts</h3>
                     <div className="episode-card__container">
-
-                    <EpisodeCard episodes={episodes}/>
+                    <EpisodeCard episodes={filteredSavedEpisodes}/>
                     </div>
-
                 </div>
             </section>
     );

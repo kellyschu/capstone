@@ -39,7 +39,7 @@ function SearchPage() {
             <h1>Search Page</h1>
             <input
                 type="text"
-                placeholder="Search episodes by title"
+                placeholder="Search episodes"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
