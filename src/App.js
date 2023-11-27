@@ -24,7 +24,7 @@ function App() {
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState({});
     const [selectedUser, setSelectedUser] = useState("John");
-    const [selectedUserId, setSelectedUserId] = useState("7a8e0fc8-34da-4e61-89cd-5e80afed8609");
+    const [selectedUserId, setSelectedUserId] = useState('f2cfa14b-9f6c-4ea2-bf9a-b4d187b4b33a');
 
         const navigate = useNavigate();
 
@@ -33,7 +33,10 @@ function App() {
             const selectedUserId = users.find(user => user.first_name === selectedUserName)?.id;
             setSelectedUser(selectedUserName);
             setSelectedUserId(selectedUserId);
-            // navigate(`/mylibrary/${selectedUserId}`);
+            console.log(selectedUserName, "selectedUserName app page");
+
+            console.log(selectedUserId, "selectedUserId app page");
+            navigate(`/mylibrary/${selectedUserId}`);
         };
 
     
@@ -42,6 +45,7 @@ function App() {
                 try {
                     const response = await axios.get(`http://localhost:8002/api/users`);
                     setUsers(response.data);
+                    console.log(response.data, "users app page");
                 } catch (error) {
                     console.error('Error fetching users:', error);
                 }
@@ -52,6 +56,7 @@ function App() {
         const handleFilterUsers = () => {
             const filtered = users.filter(user => user.first_name === selectedUser);
             setFilteredUsers(filtered);
+            console.log(filtered, "filtered app page");  
         };
     
     
@@ -78,7 +83,7 @@ function App() {
                     <Route path="/episode/:id" element={<EpisodePage />} />
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />} />
-                    <Route path="/mylibrary/:id" Component={<YourLibraryPage user={selectedUserId}/>} />
+                    <Route path="/mylibrary/:id" element={<YourLibraryPage />} />
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route path="/categories/:category" element={<SelectCategoryPage />} />
                     <Route path="/mostplayed" element={<MostPlayedPage />} />
@@ -92,3 +97,5 @@ function App() {
 }
 
 export default App;
+
+// user={selectedUserId}

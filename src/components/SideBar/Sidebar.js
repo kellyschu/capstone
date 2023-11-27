@@ -3,6 +3,7 @@ import '@material-design-icons/font/sharp.css'
 import { NavLink } from 'react-router-dom';
 
 function Sidebar({userId}) {
+    console.log(userId, "userId side bar")
 
     return (
         <section className="sidebar">

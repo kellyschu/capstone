@@ -27,7 +27,7 @@ function MostLovedPage() {
             acc.push({ ...episode, count: 1 });
         }
         return acc;
-    }, []).sort((a, b) => b.likes - a.likes); // Sort by highest likes
+    }, []).sort((a, b) => b.likes - a.likes);
 
     return (
         <section className="page__main">
