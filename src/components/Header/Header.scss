@@ -1,11 +1,33 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .header {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    width: 68vw;
+    width: 98%;
+    margin: 0 auto;
     height: 5.5rem;
-    color: whitesmoke;
-    img {
-        width: 40px;
+    color: $secondary-cloud;
+    &__user-id {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 15rem;
+        background-color: $background-grey;
+        border-radius: 10px;
     }
+}
+.dropdown {
+    width: 10rem;
+    height: 3rem;
+    margin: 0  0 0.25rem 0;
+    background-color: $background-grey;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    color: $secondary-cloud;
+    appearance: none;
+    cursor: pointer; 
 }

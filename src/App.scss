@@ -16,3 +16,17 @@ body {
 h2 {
     font-weight: 100;
 }
+.page {
+    &__display-flex {
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        margin: 0 auto;
+    }
+    &__main {
+        background-color: $background-grey;
+        border-radius: 25px;
+        width: 98%;
+        margin: 0 auto;
+    }
+}

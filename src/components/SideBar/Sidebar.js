@@ -1,16 +1,8 @@
 import "./Sidebar.scss";
 import '@material-design-icons/font/sharp.css'
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Sidebar() {
-    // const location = useLocation();
-    // const warehouseIsActive = () => {
-    //     return location.pathname === '/' || location.pathname.startsWith('/warehouses');
-    // };
-
-    // const inventoryIsActive = () => {
-    //     return location.pathname.startsWith('/inventory');
-    // };
 
     return (
         <section className="sidebar">

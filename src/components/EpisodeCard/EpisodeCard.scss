@@ -2,17 +2,17 @@
 @use "../../styles/partials/mixins" as *;
 
 .episode-card {
-    height: 250px;
+    height: 15.25rem;
     border-radius: 10px;
-    width: 200px;
+    width: 12.7rem;
     font-size: .8rem;
-    margin: 1rem;
+    margin: .5rem;
     background-color: $supporting-blue;
     color: $background-grey;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 1rem;
+    padding: .5rem;
     font-weight: 800;
     &__container {
         display: flex;
