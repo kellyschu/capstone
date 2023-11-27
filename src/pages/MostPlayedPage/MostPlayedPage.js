@@ -27,14 +27,12 @@ function MostPlayedPage() {
         }
         return acc;
     }, []).sort((a, b) => b.saves - a.saves);
-    console.log(filteredEpisodes, "filteredEpisodes");
 
     return (
         <section className="page__main">
-            <h1>Most Played Page</h1>
+            <h1>Most Saved Page</h1>
             <div className="episode-card__container">
                 <EpisodeCard episodes={filteredEpisodes} />
-                <h2>Coming Soon!</h2>
             </div>
         </section>
     );

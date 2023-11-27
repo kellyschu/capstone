@@ -5,10 +5,8 @@ import './EpisodePage.scss'
 import CommentForm from '../../components/CommentForm/CommentForm';
 
 function EpisodePage() {
-    //aray of comments
     const [episodeComments, setEpisodeComments] = useState([]);
     const { id } = useParams();
-    // ooject of info about episode
     const [episodeData, setEpisodeData] = useState({});
 
     useEffect(() => {
@@ -38,7 +36,6 @@ function EpisodePage() {
                     <iframe
                         key={episodeData.id}
                         title={episodeData.title}
-                        // style="border-radius:12px" 
                         src={`https://open.spotify.com/embed/episode/${episodeData.id}?utm_source=generator&theme=0`}
                         width="92%"
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

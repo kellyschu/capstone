@@ -13,7 +13,6 @@ function SearchPage() {
             try {
                 const response = await axios.get('http://localhost:8002/api/episodes');
                 setEpisodes(response.data);
-                console.log(response.data, "response.data searchpage");
             } catch (error) {
                 console.error('Error fetching episodes:', error);
             }

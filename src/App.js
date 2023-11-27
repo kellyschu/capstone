@@ -1,7 +1,6 @@
 import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 import EpisodePage from './pages/EpisodePage/EpisodePage';
-// import Footer from './components/Footer/Footer';
 import Sidebar from './components/SideBar/Sidebar';
 import MostLovedPage from "./pages/MostLovedPage/MostLovedPage"
 import MostPlayedPage from "./pages/MostPlayedPage/MostPlayedPage"
@@ -11,11 +10,8 @@ import HomePage from "./pages/HomePage/HomePage"
 import SearchPage from "./pages/SearchPage/SearchPage"
 import YourLibraryPage from "./pages/YourLibraryPage/YourLibraryPage"
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage"
-// import CategoryPage from "./pages/CategoryPage/CategoryPage"
-// import Header from './components/Header/Header';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import './components/Header/Header.scss';
 import { useNavigate } from 'react-router-dom';
 import SelectCategoryPage from './pages/SelectCategoryPage/SelectCategoryPage';
@@ -33,19 +29,14 @@ function App() {
             const selectedUserId = users.find(user => user.first_name === selectedUserName)?.id;
             setSelectedUser(selectedUserName);
             setSelectedUserId(selectedUserId);
-            console.log(selectedUserName, "selectedUserName app page");
-
-            console.log(selectedUserId, "selectedUserId app page");
             navigate(`/mylibrary/${selectedUserId}`);
         };
-
     
         useEffect(() => {
             async function getUsers() {
                 try {
                     const response = await axios.get(`http://localhost:8002/api/users`);
                     setUsers(response.data);
-                    console.log(response.data, "users app page");
                 } catch (error) {
                     console.error('Error fetching users:', error);
                 }
@@ -56,7 +47,6 @@ function App() {
         const handleFilterUsers = () => {
             const filtered = users.filter(user => user.first_name === selectedUser);
             setFilteredUsers(filtered);
-            console.log(filtered, "filtered app page");  
         };
     
     
@@ -78,7 +68,6 @@ function App() {
                             </select>
                         </div>
                         </div>
-
                     <Routes>
                     <Route path="/episode/:id" element={<EpisodePage />} />
                     <Route path="/home" element={<HomePage />} />
@@ -97,5 +86,3 @@ function App() {
 }
 
 export default App;
-
-// user={selectedUserId}

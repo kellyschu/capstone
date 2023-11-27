@@ -28,7 +28,6 @@ function MostCommentedPage() {
         }
         return acc;
     }, []).sort((a, b) => b.count - a.count);
-    console.log(filteredEpisodes, "filteredEpisodes");
 
     return (
         <section className="page__main">
