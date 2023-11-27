@@ -17,7 +17,7 @@ function YourLibraryPage() {
             try {
                 const response = await axios.get(`http://localhost:8002/api/users/${id}`);
                 setUserData(response.data);
-                console.log(response.data, "userdata");
+                
             } catch (error) {
                 console.error(error);
             }
@@ -28,13 +28,12 @@ function YourLibraryPage() {
     return (
         <section className="page__main">
             <div className="card__container">
-                <h3>Crime Podcasts</h3>
-
+                <h3>{userData ? `${userData[0].first_name} ${userData[0].last_name} Podcasts` : 'Loading...'}</h3>
                 <EpisodeCard episodes={userData}/>
             </div>
-            <div className="card__container">
+            {/* <div className="card__container">
                 <h3>Crime Podcasts</h3>
-            </div>
+            </div> */}
 
         </section>
     );
