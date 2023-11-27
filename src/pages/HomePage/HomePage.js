@@ -18,7 +18,7 @@ function HomePage() {
         }
     };
     getEpisode();
-}, episodes);
+}, []);
 
     return (
             <section className="page__main">

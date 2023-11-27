@@ -81,8 +81,6 @@ function App() {
                     <Route path="/mylibrary/:id" Component={<YourLibraryPage user={selectedUserId}/>} />
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route path="/categories/:category" element={<SelectCategoryPage />} />
-
-                    {/* <Route path="/categories/id" element={<CategoryPage />} /> */}
                     <Route path="/mostplayed" element={<MostPlayedPage />} />
                     <Route path="/mostloved" element={<MostLovedPage />} />
                     <Route path="/mosttalkedabout" element={<MostCommentedPage />} />
