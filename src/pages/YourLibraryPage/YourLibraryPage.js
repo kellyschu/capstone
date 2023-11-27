@@ -6,7 +6,6 @@ import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 function YourLibraryPage() {
     const [userData, setUserData] = useState();
     const {id} = useParams();
-    console.log(id, "id from params library page");
 
     useEffect(() => {
         async function getData() {
