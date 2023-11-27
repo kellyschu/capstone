@@ -1,14 +1,25 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+.blue {
+    background-color: $supporting-blue;
+    color: $background-grey;
+}
 
+.grey {
+    background-color: $secondary-slate;
+    color: $secondary-cloud;
+}
+
+.white {
+    background-color: $secondary-cloud;
+    color: $background-grey;
+}
 .episode-card {
     height: 15rem;
     border-radius: 10px;
     width: 12.5rem;
     font-size: .8rem;
     margin: .5rem .75rem;
-    background-color: $supporting-blue;
-    color: $background-grey;
     display: flex;
     flex-direction: column;
     justify-content: end;
