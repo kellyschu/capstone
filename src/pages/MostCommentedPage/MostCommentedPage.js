@@ -3,10 +3,10 @@ import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 
 function MostCommentedPage() {
     return (
-        <div className="most-commented-page">
-            <h1>Most Commented Page</h1>
-            <EpisodeCard />
-        </div>
+            <section className="page__main">
+                <h1>Most Commented Page</h1>
+                <EpisodeCard />
+            </section>
     );
 }
 

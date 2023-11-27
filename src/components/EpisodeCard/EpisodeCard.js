@@ -1,17 +1,18 @@
 import "./EpisodeCard.scss";
-// import placeholder from '../../assets/search.png';
-
+import { NavLink } from "react-router-dom";
 
 function EpisodeCard({ episodes }) {
     return (
         <div className="episode-card__container">
             {episodes ? (
-                Object.values(episodes).slice(0, 5).map((episode) => (
-                    <div className="episode-card" key={episode.id}>
+                Object.values(episodes).map((episode) => (
+                    <NavLink to={`/episode/${episode.id}`} key={episode.id}>
+                        <div className="episode-card">
                         {/* <img src={placeholder} alt="img"/> */}
                         <h3 className="episode-card__title">{episode.title.substring(0, 43)}{episode.title.length > 40 ? '...' : ''}</h3>
                         <p>{episode.channel}</p>
-                    </div>
+                        </div>
+                    </NavLink>
                 ))
             ) : (
                 <p>Loading episodes...</p>

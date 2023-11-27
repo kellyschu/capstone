@@ -1,12 +1,36 @@
-// import "./HomePage.scss";
+import "./HomePage.scss";
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+
 
 function HomePage() {
+    const [episodes, setEpisodes] = useState([]);
+
+    useEffect(() => {
+        async function getEpisode() {
+        try {
+            const response = await axios.get(`http://localhost:8002/api/episodes/`);
+            setEpisodes(response.data);
+        } catch (error) {
+            console.error('Error fetching episode:', error);
+        }
+    };
+    getEpisode();
+}, episodes);
+
     return (
-        <div className="home-page">
-            <h1>Home Page</h1>  
-            <EpisodeCard />
-        </div>
+            <section className="page__main">
+                <div className="card__container">
+                    <h3>Crime Podcasts</h3>
+                    <EpisodeCard episodes={episodes}/>
+                </div>
+                <div className="card__container">
+                    <h3>Crime Podcasts</h3>
+                    <EpisodeCard episodes={episodes}/>
+                </div>
+            </section>
     );
 }
 export default HomePage;

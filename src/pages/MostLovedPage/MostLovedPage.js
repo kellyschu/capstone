@@ -3,10 +3,10 @@ import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 
 function MostLovedPage() {
     return (
-        <div className="most-loved-page">
+        <section className="page__main">
             <h1>Most Loved Page</h1>
             <EpisodeCard />
-        </div>
+        </section>
     );
 }
 

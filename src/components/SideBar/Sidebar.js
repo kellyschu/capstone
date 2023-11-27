@@ -1,16 +1,8 @@
 import "./Sidebar.scss";
 import '@material-design-icons/font/sharp.css'
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function Sidebar() {
-    // const location = useLocation();
-    // const warehouseIsActive = () => {
-    //     return location.pathname === '/' || location.pathname.startsWith('/warehouses');
-    // };
-
-    // const inventoryIsActive = () => {
-    //     return location.pathname.startsWith('/inventory');
-    // };
+function Sidebar({userId}) {
 
     return (
         <section className="sidebar">
@@ -30,7 +22,7 @@ function Sidebar() {
 
             </div>
             <div className="sidebar-section">
-                <NavLink exact className="sidebar-selector"  to="/user/:id" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink exact className="sidebar-selector"  to={`/mylibrary/${userId}`} style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">import_contacts</span>
                     <h2>Your Library</h2>
                 </NavLink>
