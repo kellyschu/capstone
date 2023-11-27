@@ -1,13 +1,14 @@
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 // import "./SomethingNewPage.scss";
+import Header from "../../components/Header/Header";
 
 function SomethingNewPage() {
 
     return (
-        <div className="SomethingNewPage-page">
+      <section className="page__main">
             <h1>Something New Page</h1>
             <EpisodeCard />
-        </div>
+        </section>
     );
 }
 export default SomethingNewPage;

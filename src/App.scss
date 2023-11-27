@@ -11,7 +11,6 @@ body {
 }
 .app-flex {
     display: flex;
-    
 }
 h2 {
     font-weight: 100;
@@ -29,4 +28,27 @@ h2 {
         width: 98%;
         margin: 0 auto;
     }
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    display: inline-flex;
+    width: 98%;
+    margin: 0 auto;  
+    height: 22rem;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    // scrollbar-track-color: antiquewhite;
+    scrollbar-color: antiquewhite;
+    scrollbar-width: thin;
+    font-size: 1.5rem;
+    h3 {
+        margin: 1rem 0 0 1rem;
+    }
+
+}
+iframe {
+    padding: 2rem;
 }

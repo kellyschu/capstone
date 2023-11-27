@@ -4,10 +4,10 @@ import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 function MostPlayedPage() {
 
     return (
-        <div className="MostPlayedPage-page">
+        <section className="page__main">
             <h1>Most Played Page</h1>
             <EpisodeCard />
-        </div>
+        </section>
     );
 }
 export default MostPlayedPage;

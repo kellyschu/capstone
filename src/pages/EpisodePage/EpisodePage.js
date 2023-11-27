@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-// import Header from '../../components/Header/Header';
 import './EpisodePage.scss'
 import CommentForm from '../../components/CommentForm/CommentForm';
 
@@ -35,9 +34,7 @@ function EpisodePage() {
 
 
         return (
-            <div className='page__display-flex'>
-                {/* <Header /> */}
-                <section className='page__main'>
+                <section className="page__main">
                     <iframe
                         key={episodeData.id}
                         title={episodeData.title}
@@ -62,7 +59,6 @@ function EpisodePage() {
                     <p>Be the first to write a comment!</p>
                 )}
                 </section>
-            </div>
         );
 
 }

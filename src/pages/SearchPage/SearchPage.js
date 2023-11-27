@@ -4,10 +4,10 @@ import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 function SearchPage() {
 
     return (
-        <div className="SearchPage-page">
+        <section className="page__main">
             <h1>Search Page</h1>
             <EpisodeCard />
-        </div>
+        </section>
     );
 }
 export default SearchPage;
