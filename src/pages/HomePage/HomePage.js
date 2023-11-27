@@ -24,11 +24,17 @@ function HomePage() {
             <section className="page__main">
                 <div className="card__container">
                     <h3>Crime Podcasts</h3>
+                    <div className="episode-card__container">
                     <EpisodeCard episodes={episodes}/>
+                    </div>
                 </div>
                 <div className="card__container">
                     <h3>Crime Podcasts</h3>
+                    <div className="episode-card__container">
+
                     <EpisodeCard episodes={episodes}/>
+                    </div>
+
                 </div>
             </section>
     );

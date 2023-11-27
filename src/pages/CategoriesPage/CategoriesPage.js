@@ -18,6 +18,7 @@ function CategoriesPage() {
             }
         };
         getEpisodes();
+        console.log(episodes, "episodes");
     }, []);
 
 

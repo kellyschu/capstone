@@ -6,14 +6,14 @@ function CategoryCard() {
     
     return (
         <div className="category-card__container">
-            <NavLink className="category-card" to="/category/1"><p>Business & Entrepreneurship</p></NavLink>
-            <NavLink className="category-card" to="/category/2"><p>Technology</p></NavLink>
-            <NavLink className="category-card" to="/category/3"><p>Health & wellness</p></NavLink>
-            <NavLink className="category-card" to="/category/4"><p>Sports</p></NavLink>
-            <NavLink className="category-card" to="/category/5"><p>Arts & Entertainment</p></NavLink>
-            <NavLink className="category-card" to="/category/6"><p>New & Politics</p></NavLink>
-            <NavLink className="category-card" to="/category/7"><p>True Crime</p></NavLink>
-            <NavLink className="category-card" to="/category/8"><p>Comedy</p></NavLink>
+            <NavLink className="category-card" to="/categories/1"><h2>Business & Entrepreneurship</h2></NavLink>
+            <NavLink className="category-card" to="/categories/2"><h2>Technology</h2></NavLink>
+            <NavLink className="category-card" to="/categories/3"><h2>Health & wellness</h2></NavLink>
+            <NavLink className="category-card" to="/categories/4"><h2>Sports</h2></NavLink>
+            <NavLink className="category-card" to="/categories/5"><h2>Arts & Entertainment</h2></NavLink>
+            <NavLink className="category-card" to="/categories/6"><h2>New & Politics</h2></NavLink>
+            <NavLink className="category-card" to="/categories/7"><h2>True Crime</h2></NavLink>
+            <NavLink className="category-card" to="/categories/8"><h2>Comedy</h2></NavLink>
         </div>
     );
 }

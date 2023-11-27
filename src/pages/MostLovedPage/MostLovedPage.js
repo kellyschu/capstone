@@ -5,7 +5,10 @@ function MostLovedPage() {
     return (
         <section className="page__main">
             <h1>Most Loved Page</h1>
+            <div className="episode-card__container">
+
             <EpisodeCard />
+            </div>
         </section>
     );
 }

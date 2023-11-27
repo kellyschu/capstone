@@ -22,7 +22,7 @@ import SelectCategoryPage from './pages/SelectCategoryPage/SelectCategoryPage';
 
 function App() {
     const [users, setUsers] = useState([]);
-    const [filteredUsers, setFilteredUsers] = useState();
+    const [filteredUsers, setFilteredUsers] = useState({});
     const [selectedUser, setSelectedUser] = useState("John");
     const [selectedUserId, setSelectedUserId] = useState("7a8e0fc8-34da-4e61-89cd-5e80afed8609");
 
@@ -33,7 +33,7 @@ function App() {
             const selectedUserId = users.find(user => user.first_name === selectedUserName)?.id;
             setSelectedUser(selectedUserName);
             setSelectedUserId(selectedUserId);
-            navigate(`/mylibrary/${selectedUserId}`);
+            // navigate(`/mylibrary/${selectedUserId}`);
         };
 
     
@@ -80,7 +80,7 @@ function App() {
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/mylibrary/:id" Component={<YourLibraryPage user={selectedUserId}/>} />
                     <Route path="/categories" element={<CategoriesPage />} />
-                    <Route path="/categories/:id" element={<SelectCategoryPage />} />
+                    <Route path="/categories/:category" element={<SelectCategoryPage />} />
 
                     {/* <Route path="/categories/id" element={<CategoryPage />} /> */}
                     <Route path="/mostplayed" element={<MostPlayedPage />} />
