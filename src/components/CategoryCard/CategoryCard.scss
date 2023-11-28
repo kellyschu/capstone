@@ -1,22 +1,47 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+
 .category-card {
+    &:nth-child(3n + 1) {
+        background-color: $secondary-cloud;
+        color: $background-grey;
+    }
+    &:nth-child(3n + 2) {
+        background-color: $supporting-blue;
+        color: $background-grey;
+    }
+    &:nth-child(3n + 3) {
+        background-color: $secondary-slate;
+        color: $secondary-cloud;
+    }
     height: 15rem;
     border-radius: 10px;
     width: 12rem;
     font-size: .8rem;
-    margin: .5rem .75rem;
-    background-color: $supporting-blue;
-    color: $background-grey;
+    margin: .25rem 1.3rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: end;
     padding: .5rem;
-    font-weight: 800;
-    text-decoration: none;
-    &__container {
+    margin: 0 auto;
+    margin-bottom: 1.05rem;
+    h3 {
+        font-size: 1.3rem;
+        letter-spacing: -.05rem;
+        line-height: 1.45rem;
+        margin-bottom: .5rem;
+        padding: 0  0 0 .5rem;
+        font-weight: 600;
+    }
+    &:hover {
+        background-color: rgba(89, 113, 166, 0.5);
+        cursor: pointer;
+        color: white;
+    }
+}
+    
+    .category-card__container {
         display: flex;
         flex-wrap: wrap;
     }
-}

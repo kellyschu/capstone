@@ -42,7 +42,7 @@ function SearchPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
-        <div className="card__container">            
+        <div className="episode-card__container">            
             <EpisodeCard episodes={searchResults} />
         </div>
     </section>

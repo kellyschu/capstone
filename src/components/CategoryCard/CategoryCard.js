@@ -1,21 +1,29 @@
-import "./CategoryCard.scss";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './CategoryCard.scss';
 
 
 function CategoryCard() {
-    
     return (
-        <div className="category-card__container">
-            <NavLink className="category-card" to="/categories/1"><h2>Business & Entrepreneurship</h2></NavLink>
-            <NavLink className="category-card" to="/categories/2"><h2>Technology</h2></NavLink>
-            <NavLink className="category-card" to="/categories/3"><h2>Health & wellness</h2></NavLink>
-            <NavLink className="category-card" to="/categories/4"><h2>Sports</h2></NavLink>
-            <NavLink className="category-card" to="/categories/5"><h2>Arts & Entertainment</h2></NavLink>
-            <NavLink className="category-card" to="/categories/6"><h2>New & Politics</h2></NavLink>
-            <NavLink className="category-card" to="/categories/7"><h2>True Crime</h2></NavLink>
-            <NavLink className="category-card" to="/categories/8"><h2>Comedy</h2></NavLink>
+        <div>
+            <div className="category-card__container">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+                    <NavLink key={index} style= { { textDecoration: 'none' }} className="category-card" to={`/categories/${index}`}>
+                        <h3>
+                            {index === 1 && 'Business & Entrepreneurship'}
+                            {index === 2 && 'Technology'}
+                            {index === 3 && 'Health & wellness'}
+                            {index === 4 && 'Sports'}
+                            {index === 5 && 'Arts & Entertainment'}
+                            {index === 6 && 'News & Politics'}
+                            {index === 7 && 'True Crime'}
+                            {index === 8 && 'Comedy'}
+                        </h3>
+                    </NavLink>
+            ))}
+            </div>
         </div>
     );
-}
+};
 
 export default CategoryCard;
