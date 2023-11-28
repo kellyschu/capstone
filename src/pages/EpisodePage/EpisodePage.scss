@@ -2,23 +2,34 @@
 @use "../../styles/partials/mixins" as *;
 
 iframe {
-    margin: 0 auto;
+    padding: 2rem;
 }
 .data {
     &__comments {
         border-right: 1px solid $supporting-blue;
         margin: 0;
+        margin-top: -4rem;
         padding: 0;
-        width: 30rem;
+        min-width: 30rem;
+        max-width: 40rem;
         height: fit-content;
+        padding-bottom: 3rem;
         &--content {
-            margin: 0 auto;
+            margin: 0 austo;
             width: 25rem;
             h5 {
                 margin: 0;
                 padding: .2rem 0 .2rem .75rem;
                 font-size: 1.1rem;
                 font-weight: 600;
+                letter-spacing: -.02rem;
+                color: $secondary-cloud;
+            }
+            h3 {
+                margin: 0;
+                padding: 1.5rem 0 25rem 2rem;
+                font-size: 1.4rem;
+                font-weight: 800;
                 letter-spacing: -.02rem;
                 color: $secondary-cloud;
             }
@@ -35,8 +46,8 @@ iframe {
     &__episodes {
         margin: 0;
         margin-top: 2rem;
-        width: 23rem;
-        padding-left: 2rem;
+        min-width: 23rem;
+        max-width: 28rem;
         h4 {
             margin: 0;
             padding: .5rem 0 .25rem .5rem;
@@ -45,13 +56,14 @@ iframe {
             letter-spacing: -.02rem;
             color: $secondary-cloud;
         }
+    
         p {
             border-top: .08rem solid $secondary-cloud;
             margin: 0;
             padding: .5rem 0 1rem .5rem;
             font-size: 1rem;
             font-weight: 300;
-            letter-spacing: -.02rem;
+            line-height: 1.5rem;
             color: $secondary-cloud;
         }
     }

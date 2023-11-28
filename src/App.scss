@@ -78,7 +78,6 @@ h2 {
 .display-flex {
     &__inline {
         display: flex;
-        justify-content: flex-end;
         color: $secondary-cloud;
         font-size: 1.25rem;
         padding-right: .75rem;
@@ -96,7 +95,22 @@ h2 {
 }
 .align-items__center {
     align-items: center;
+    justify-content: flex-end;
+
 }   
+.justify-content {
+    &__flex-end {
+        justify-content: flex-end;
+    }
+    &__space-around {
+        justify-content: space-around;
+    }
+
+    &__flex-end {
+        justify-content: flex-end;
+    }
+}
+
 .border-top {
     border-top: 1px solid $secondary-cloud;
     padding-top: 1rem;

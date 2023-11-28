@@ -68,7 +68,7 @@ function EpisodePage({userId}) {
                         loading="lazy"
                         height="352" 
                     ></iframe>
-                    <section className="display-flex__inline display-flex__inline--parent">
+                    <section className="display-flex__inline justify-content__flex-end display-flex__inline--parent">
                     <div className="display-flex__inline align-items__center">
                         <span
                             className="material-icons-sharp"
@@ -100,7 +100,7 @@ function EpisodePage({userId}) {
                         <p>{episodeData.saves} Saves</p>
                     </div>
                     </section>
-                    <div className='display-flex__inline'>
+                    <div className='display-flex__inline justify-content__space-around'>
                         <section className='display-flex__column'>
                             <div className='data__comments'>
                             <CommentForm episodeId={episodeData.id} userId={userId} />
@@ -108,7 +108,7 @@ function EpisodePage({userId}) {
                                 {episodeComments.length > 0 ? (
                                     episodeComments.map((item) => (
                                         <div key={item.id}>
-                                            <div className="display-flex__inline border-top" >
+                                            <div className="display-flex__inline border-top justify-content__flex-end" >
                                                 <h5>{item.first_name} {item.last_name}</h5>
                                                 <p>{new Date(item.timestamp).toLocaleDateString()}</p>
                                             </div>
@@ -118,7 +118,7 @@ function EpisodePage({userId}) {
                                         </div>
                                     ))
                                 ) : (
-                                    <p>Be the first to write a comment!</p>
+                                    <h3>Be the first to post a comment!</h3>
                                 )
                             }
                             </div>

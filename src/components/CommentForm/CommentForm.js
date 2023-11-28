@@ -41,7 +41,7 @@ const CommentForm = ({ episodeId, userId }) => {
 
     return (
         <div className="comment-form">
-        <h4>Leave a Comment</h4>
+        <h4>Share Your Thoughts</h4>
         <p>{user[0]?.first_name} {user[0]?.last_name}</p>
         <form className='comment-form' onSubmit={handleSubmit}>
             <label htmlFor='comment'>
@@ -49,7 +49,7 @@ const CommentForm = ({ episodeId, userId }) => {
                     className='comment-form__input'
                     type="text"
                     name="comment"
-                    placeholder="Leave a comment..."
+                    placeholder="Tell us what you think..."
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                 />

@@ -22,7 +22,7 @@ function YourLibraryPage() {
 
     return (
         <section className="page__main">
-            <h3>{userData ? `${userData[0].first_name} ${userData[0].last_name} Podcasts` : 'Loading...'}</h3>
+            <h1>{userData ? `${userData[0].first_name} ${userData[0].last_name} Podcasts` : 'Loading...'}</h1>
             <div className="episode-card__container">
                 <EpisodeCard episodes={userData}/>
             </div>
