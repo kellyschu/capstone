@@ -69,3 +69,8 @@ iframe {
         }
     }
 }
+.button {
+    &__clicked {
+        color: $supporting-green;
+    }
+}
