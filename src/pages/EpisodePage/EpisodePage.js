@@ -1,3 +1,4 @@
+import '@material-design-icons/font/sharp.css'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -8,6 +9,8 @@ function EpisodePage({userId}) {
     const [episodeComments, setEpisodeComments] = useState([]);
     const { id } = useParams();
     const [episodeData, setEpisodeData] = useState({});
+    const [isLiked, setIsLiked] = useState(false);
+    const [isSaved, setIsSaved] = useState(false);
 
     useEffect(() => {
         async function getEpisode() {
@@ -28,8 +31,30 @@ function EpisodePage({userId}) {
             setEpisodeData(response.data);
         }
         getEpisodes();
-        } , [id]);
+        } , [id, isLiked, episodeData.likes]);
 
+        const toggleLike = async () => {
+            setIsLiked(!isLiked);
+            setEpisodeData((prevData) => ({
+                ...prevData,
+                likes: isLiked ? prevData.likes - 1 : prevData.likes + 1,
+            }));
+            await axios.patch(`http://localhost:8002/api/episodes/${id}`, {
+                likes: isLiked ? episodeData.likes - 1 : episodeData.likes + 1,
+            }); 
+        }
+
+        const toggleSave = async () => {
+            setIsSaved(!isSaved);
+            setEpisodeData((prevData) => ({
+                ...prevData,
+                saves: isSaved ? prevData.saves - 1 : prevData.saves + 1,
+            }));
+            await axios.patch(`http://localhost:8002/api/episodes/${id}`, {
+                saves: isSaved ? episodeData.saves - 1 : episodeData.saves + 1,
+            }); 
+        }
+            
 
         return (
                 <section className="page__main">
@@ -43,20 +68,60 @@ function EpisodePage({userId}) {
                         loading="lazy"
                         height="352" 
                     ></iframe>
-                            <CommentForm episodeId={episodeData.id} userId={userId} />
-                {episodeComments.length > 0 ? (
-                    episodeComments.map((item) => (
-                        <div key={item.id}>
-                            <p>{item.first_name} {item.last_name}</p>
-                            <p>{new Date(item.timestamp).toLocaleDateString()}</p>
-                            <p>{item.content}</p>
-                        </div>
-                    ))
-                ) : (
-                    <p>Be the first to write a comment!</p>
-                )}
+                    <section className="display-flex__inline display-flex__inline--parent">
+                    <div className="display-flex__inline">
+                        <span
+                            className="material-icons-sharp"
+                            style={{ cursor: 'pointer', display: isLiked ? 'none' : 'inline' }}
+                            onClick={toggleLike}>
+                            favorite_border
+                        </span>
+                        <span
+                            className="material-icons-sharp"
+                            style={{ cursor: 'pointer', display: isLiked ? 'inline' : 'none' }}
+                            onClick={toggleLike}>
+                            favorite
+                        </span>
+                        <p>{episodeData.likes} Likes</p>
+                    </div>
+                    <div className="display-flex__inline">
+                        <span
+                            className="material-icons-sharp"
+                            style={{ cursor: 'pointer', display: isSaved ? 'none' : 'inline' }}
+                            onClick={toggleSave}>
+                            bookmark_border
+                        </span>
+                        <span
+                            className="material-icons-sharp"
+                            style={{ cursor: 'pointer', display: isSaved ? 'inline' : 'none' }}
+                            onClick={toggleSave}>
+                            bookmark
+                        </span>
+                        <p>{episodeData.saves} Saves</p>
+                    </div>
+                    </section>
+                        <CommentForm episodeId={episodeData.id} userId={userId} />
+                        {episodeComments.length > 0 ? (
+                            episodeComments.map((item) => (
+                                <div key={item.id}>
+                                    <p>{item.first_name} {item.last_name}</p>
+                                    <p>{new Date(item.timestamp).toLocaleDateString()}</p>
+                                    <p>{item.content}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>Be the first to write a comment!</p>
+                        )
+                    }
+                    <div>
+                        <h4>Podcast Channel</h4>
+                        <p>{episodeData.channel}</p>
+                        <h4>Description</h4>
+                        <p>{episodeData.description}</p>
+                    </div>
                 </section>
-        );
 
-}
+        );
+    }
+
 export default EpisodePage;
