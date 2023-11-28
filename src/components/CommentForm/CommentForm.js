@@ -1,12 +1,10 @@
 import './CommentForm.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const CommentForm = ({ episodeId, userId }) => {
     const [comment, setComment] = useState('');
-    console.log(episodeId, "episode id comment forms");
-    console.log(userId, "user id comment form");
-    console.log(comment, "comment form");
+    const [user, setUser] = useState({});
 
     const handleSubmit = async (e) => {
 
@@ -29,19 +27,34 @@ const CommentForm = ({ episodeId, userId }) => {
         }
     };
 
+    useEffect(() => {
+        async function getUser() {
+            try {
+                const response = await axios.get(`http://localhost:8002/api/users/${userId}`);
+                setUser(response.data);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        getUser();
+        } , [userId]);
+
     return (
         <div className="comment-form">
-        <form onSubmit={handleSubmit}>
-            <label>
-            <input
-                type="text"
-                name="comment"
-                placeholder="Write a comment..."
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-            />
+        <h2>Leave a Comment</h2>
+        <p>{user[0]?.first_name} {user[0]?.last_name}</p>
+        <form className='comment-form' onSubmit={handleSubmit}>
+            <label htmlFor='comment'>
+                <input
+                    className='comment-form__input'
+                    type="text"
+                    name="comment"
+                    placeholder="Leave a comment..."
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                />
             </label>
-            <input type="submit" value="Submit" />
+            <input className='comment-form__submit' type="submit" value="Post Comment"/>
         </form>
         </div>
     );

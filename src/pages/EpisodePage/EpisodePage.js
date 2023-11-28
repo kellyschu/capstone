@@ -31,7 +31,7 @@ function EpisodePage({userId}) {
             setEpisodeData(response.data);
         }
         getEpisodes();
-        } , [id, isLiked, episodeData.likes]);
+        } , [id]);
 
         const toggleLike = async () => {
             setIsLiked(!isLiked);
