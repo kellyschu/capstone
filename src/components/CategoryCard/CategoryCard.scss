@@ -3,9 +3,13 @@
 
 
 .category-card {
+    position: relative;        
     &:nth-child(3n + 1) {
         background-color: $secondary-cloud;
         color: $background-grey;
+        span {
+            color: $supporting-blue;
+        }
     }
     &:nth-child(3n + 2) {
         background-color: $supporting-blue;
@@ -14,6 +18,16 @@
     &:nth-child(3n + 3) {
         background-color: $secondary-slate;
         color: $secondary-cloud;
+        span {
+            color: $supporting-blue;
+        }
+    }
+    span {
+        font-size: 7.5rem;
+        // text-align: center;
+        position: absolute;
+        padding-left: 17%;
+        top: 22%;
     }
     height: 15rem;
     border-radius: 10px;
@@ -44,4 +58,7 @@
     .category-card__container {
         display: flex;
         flex-wrap: wrap;
+        // overflow-y: auto;
+        padding: 1.75rem 0 1.25rem .75rem;
+        
     }
