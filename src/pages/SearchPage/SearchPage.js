@@ -34,16 +34,18 @@ function SearchPage() {
     }, [searchTerm, episodes]);
 
     return (
-        <div>
-            <h1>Search Page</h1>
+    <section className="page__main">
+        <h1>Search Page</h1>
             <input
                 type="text"
                 placeholder="Search episodes"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
+        <div className="card__container">            
             <EpisodeCard episodes={searchResults} />
         </div>
+    </section>
     );
 }
 

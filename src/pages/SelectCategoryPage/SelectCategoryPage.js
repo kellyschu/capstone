@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import "../../components/EpisodeCard/EpisodeCard.scss";
 
 function SelectCategoryPage() {
     const { category } = useParams();
@@ -19,15 +20,21 @@ function SelectCategoryPage() {
         }
         getEpisodes();
     }, [category]);
+    
+    const getCardColorClass = (index) => {
+        return index % 3 === 0 ? 'blue' : index % 3 === 1 ? 'grey' : 'white';
+    };
 
     return (
         <section className="page__main">
+            <div className="card__container">
+
             <div className="episode-card__container">
             {categoryEpisodes ? (
-                Object.values(categoryEpisodes).map((episode) => (
-                    <NavLink to={`/episode/${episode.id}`} key={episode.id}>
-                        <div className="episode-card">
-                        <h3 className="episode-card__title">{episode.title.substring(0, 43)}{episode.title.length > 40 ? '...' : ''}</h3>
+                Object.values(categoryEpisodes).map((episode, index) => (
+                    <NavLink to={`/episode/${episode.id}`} style= { { textDecoration: 'none' }}  key={episode.id}>
+                        <div className={`episode-card ${getCardColorClass(index)}`}>
+                        <h2 className="episode-card__title">{episode.title.substring(0, 30)}{episode.title.length > 33 ? '...' : ''}</h2>
                         <p>{episode.channel}</p>
                         </div>
                     </NavLink>
@@ -35,6 +42,7 @@ function SelectCategoryPage() {
             ) : (
                 <p>Loading episodes...</p>
             )}
+            </div>
             </div>
         </section>
     );

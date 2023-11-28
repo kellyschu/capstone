@@ -4,12 +4,9 @@
 .sidebar {
     margin-top: .8rem;
     @include tablet {
-    max-width: 19rem;
+    max-width: 19.75rem;
     display:  flex;
     flex-direction: column;
-    @include desktop {
-        width: 25rem;
-    }
         &-section {
             margin: .4rem .2rem .5rem .7rem;
             border-radius: 25px;
@@ -34,7 +31,8 @@
                 display: flex;
                 align-items: baseline;
                 justify-content: start;
-                font-size: 1.3rem;
+                font-size: 1.4rem;
+                padding-right: 1.7rem;
                 span {
                     fill: currentColor;
                     color: $primary-blue;
@@ -44,11 +42,13 @@
             }
         }
     }
-        h2, h1 {
-            letter-spacing: -.03rem;
-        }
-        h1 {
+    h2 {
+        font-size: 1.3rem;
+    }
+    h1 {
             color: $supporting-blue;
+            letter-spacing: -.03rem;
+            margin-bottom: 0;
         }
 
 }

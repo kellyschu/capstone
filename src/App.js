@@ -12,7 +12,6 @@ import YourLibraryPage from "./pages/YourLibraryPage/YourLibraryPage"
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './components/Header/Header.scss';
 import { useNavigate } from 'react-router-dom';
 import SelectCategoryPage from './pages/SelectCategoryPage/SelectCategoryPage';
 

@@ -7,7 +7,7 @@ function Sidebar({userId}) {
     return (
         <section className="sidebar">
             <div className="sidebar-section">
-                <NavLink className="sidebar-selector__non-active" to="/home" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink className="sidebar-selector__non-active" to="/home" style={{ textDecoration: 'none' }}>
                     <span class="material-icons-sharp">mic</span>
                     <h1>PODSTREAM</h1>
                 </NavLink>
