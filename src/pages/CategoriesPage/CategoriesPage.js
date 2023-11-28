@@ -21,6 +21,7 @@ function CategoriesPage() {
     }, []);
 
 
+
     return (
         <section className="page__main">
             <h1>Categories Page</h1>

@@ -24,15 +24,26 @@
     flex-direction: column;
     justify-content: end;
     padding: .5rem;
+    &:hover {
+        background-color: rgba(89, 113, 166, 0.5);
+        cursor: pointer;
+        color: white;
+
+    }
     p {
         font-size: .9rem;
         margin: 0;
         padding: .5rem ;
+        font-weight: 800;
+        letter-spacing: -.03rem;
     }
-    h2 {
-        font-size: 1.2rem;
+    h3 {
+        font-size: 1.3rem;
+        letter-spacing: -.05rem;
+        line-height: 1.45rem;
         margin: 0;
         padding: 0  0 0 .5rem;
+        font-weight: 400;
     }
 
     &__container {

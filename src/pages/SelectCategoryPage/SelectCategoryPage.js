@@ -22,7 +22,7 @@ function SelectCategoryPage() {
     }, [category]);
     
     const getCardColorClass = (index) => {
-        return index % 3 === 0 ? 'blue' : index % 3 === 1 ? 'grey' : 'white';
+        return index % 3 === 0 ? 'grey' : index % 3 === 1 ? 'white' : 'blue';
     };
 
     return (
@@ -34,7 +34,7 @@ function SelectCategoryPage() {
                 Object.values(categoryEpisodes).map((episode, index) => (
                     <NavLink to={`/episode/${episode.id}`} style= { { textDecoration: 'none' }}  key={episode.id}>
                         <div className={`episode-card ${getCardColorClass(index)}`}>
-                        <h2 className="episode-card__title">{episode.title.substring(0, 30)}{episode.title.length > 33 ? '...' : ''}</h2>
+                        <h3 className="episode-card__title">{episode.title.substring(0, 30)}{episode.title.length > 33 ? '...' : ''}</h3>
                         <p>{episode.channel}</p>
                         </div>
                     </NavLink>

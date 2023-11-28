@@ -22,8 +22,8 @@ function YourLibraryPage() {
 
     return (
         <section className="page__main">
-            <div className="card__container">
-                <h3>{userData ? `${userData[0].first_name} ${userData[0].last_name} Podcasts` : 'Loading...'}</h3>
+            <h3>{userData ? `${userData[0].first_name} ${userData[0].last_name} Podcasts` : 'Loading...'}</h3>
+            <div className="episode-card__container">
                 <EpisodeCard episodes={userData}/>
             </div>
         </section>
