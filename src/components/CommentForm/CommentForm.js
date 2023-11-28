@@ -9,7 +9,6 @@ const CommentForm = ({ episodeId, userId }) => {
     console.log(comment, "comment form");
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
 
     const newComment = {
         user_id: userId,
