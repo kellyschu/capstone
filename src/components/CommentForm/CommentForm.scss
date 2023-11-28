@@ -1,0 +1,53 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 1rem;
+    height: 5rem;
+    padding-bottom: 11rem;
+    h4 {
+        margin: 0;
+        padding: .5rem 0 .25rem 1.25rem;
+        font-size: 1.75rem;
+        font-weight: 800;
+        letter-spacing: -.01rem;
+        color: $secondary-cloud;
+    }
+    p {
+        margin: 0;
+        padding: 0 0 1.5rem 1.25rem;
+        font-size: 1.1rem;
+        font-weight: 300;
+        letter-spacing: -.02rem;
+        color: $secondary-cloud;
+    }
+    &__input {
+        border: none;
+        border-radius: 5px;
+        padding: .75rem 3rem 3rem .5rem;
+        font-size: 1rem;
+        font-weight:400;
+        color: $background-grey;
+        width: 17rem;
+    }
+    &__submit {
+        margin-top: 1rem;
+        align-self: flex-end;
+        width: 9.5rem;
+        border: none;
+        border-radius: 5px;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: $supporting-blue;
+        color: $background-graphite;
+        &:hover {
+            background-color: #6cb3e6d1; 
+            color: $secondary-cloud;
+            cursor: pointer;
+        }
+    }
+}

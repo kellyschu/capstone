@@ -75,15 +75,44 @@ h2 {
     appearance: none;
     cursor: pointer; 
 }
-.display-flex__inline {
-    display: flex;
+.display-flex {
+    &__inline {
+        display: flex;
+        color: $secondary-cloud;
+        font-size: 1.25rem;
+        padding-right: .75rem;
+        span {
+            font-size: 1.7rem;
+            margin-left: 1.25rem;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        color: $secondary-cloud;
+        padding-right: .75rem;
+    }
+}
+.align-items__center {
     align-items: center;
     justify-content: flex-end;
-    color: $secondary-cloud;
-    font-size: 1.25rem;
-    padding-right: .75rem;
-    span {
-        font-size: 1.7rem;
-        margin-left: 1.25rem;
+
+}   
+.justify-content {
+    &__flex-end {
+        justify-content: flex-end;
     }
+    &__space-around {
+        justify-content: space-around;
+    }
+
+    &__flex-end {
+        justify-content: flex-end;
+    }
+}
+
+.border-top {
+    border-top: 1px solid $secondary-cloud;
+    padding-top: 1rem;
+    margin-top: 1rem;
 }

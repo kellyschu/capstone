@@ -43,13 +43,13 @@ function HomePage() {
     return (
             <section className="page__main">
                 <div className="card__container">
-                    <h3>Most Liked Podcasts</h3>
+                    <h1>Most Liked Podcasts</h1>
                     <div className="episode-card__container">
                     <EpisodeCard episodes={filteredLikedEpisodes}/>
                     </div>
                 </div>
                 <div className="card__container">
-                    <h3>Most Saved Podcasts</h3>
+                    <h1>Most Saved Podcasts</h1>
                     <div className="episode-card__container">
                     <EpisodeCard episodes={filteredSavedEpisodes}/>
                     </div>
