@@ -69,7 +69,7 @@ function EpisodePage({userId}) {
                         height="352" 
                     ></iframe>
                     <section className="display-flex__inline display-flex__inline--parent">
-                    <div className="display-flex__inline">
+                    <div className="display-flex__inline align-items__center">
                         <span
                             className="material-icons-sharp"
                             style={{ cursor: 'pointer', display: isLiked ? 'none' : 'inline' }}
@@ -84,7 +84,7 @@ function EpisodePage({userId}) {
                         </span>
                         <p>{episodeData.likes} Likes</p>
                     </div>
-                    <div className="display-flex__inline">
+                    <div className="display-flex__inline align-items__center">
                         <span
                             className="material-icons-sharp"
                             style={{ cursor: 'pointer', display: isSaved ? 'none' : 'inline' }}
@@ -100,24 +100,38 @@ function EpisodePage({userId}) {
                         <p>{episodeData.saves} Saves</p>
                     </div>
                     </section>
-                        <CommentForm episodeId={episodeData.id} userId={userId} />
-                        {episodeComments.length > 0 ? (
-                            episodeComments.map((item) => (
-                                <div key={item.id}>
-                                    <p>{item.first_name} {item.last_name}</p>
-                                    <p>{new Date(item.timestamp).toLocaleDateString()}</p>
-                                    <p>{item.content}</p>
-                                </div>
-                            ))
-                        ) : (
-                            <p>Be the first to write a comment!</p>
-                        )
-                    }
-                    <div>
-                        <h4>Podcast Channel</h4>
-                        <p>{episodeData.channel}</p>
-                        <h4>Description</h4>
-                        <p>{episodeData.description}</p>
+                    <div className='display-flex__inline'>
+                        <section className='display-flex__column'>
+                            <div className='data__comments'>
+                            <CommentForm episodeId={episodeData.id} userId={userId} />
+                            <div className='data__comments--content'>
+                                {episodeComments.length > 0 ? (
+                                    episodeComments.map((item) => (
+                                        <div key={item.id}>
+                                            <div className="display-flex__inline border-top" >
+                                                <h5>{item.first_name} {item.last_name}</h5>
+                                                <p>{new Date(item.timestamp).toLocaleDateString()}</p>
+                                            </div>
+                                            <div>
+                                                <p>{item.content}</p>
+                                            </div>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p>Be the first to write a comment!</p>
+                                )
+                            }
+                            </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div className='data__episodes display-flex__column'>
+                                <h4>Podcast Channel</h4>
+                                <p>{episodeData.channel}</p>
+                                <h4>Episode Description</h4>
+                                <p>{episodeData.description}</p>
+                            </div>
+                        </section>
                     </div>
                 </section>
 

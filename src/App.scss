@@ -75,15 +75,30 @@ h2 {
     appearance: none;
     cursor: pointer; 
 }
-.display-flex__inline {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: $secondary-cloud;
-    font-size: 1.25rem;
-    padding-right: .75rem;
-    span {
-        font-size: 1.7rem;
-        margin-left: 1.25rem;
+.display-flex {
+    &__inline {
+        display: flex;
+        justify-content: flex-end;
+        color: $secondary-cloud;
+        font-size: 1.25rem;
+        padding-right: .75rem;
+        span {
+            font-size: 1.7rem;
+            margin-left: 1.25rem;
+        }
     }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        color: $secondary-cloud;
+        padding-right: .75rem;
+    }
+}
+.align-items__center {
+    align-items: center;
+}   
+.border-top {
+    border-top: 1px solid $secondary-cloud;
+    padding-top: 1rem;
+    margin-top: 1rem;
 }
