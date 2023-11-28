@@ -1,6 +1,5 @@
 import "./Sidebar.scss";
 import '@material-design-icons/font/sharp.css'
-
 import { NavLink } from 'react-router-dom';
 
 function Sidebar({userId}) {

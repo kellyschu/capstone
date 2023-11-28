@@ -1,4 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-
+iframe {
+    margin: 0 auto;
+    // padding: 2rem;
+}

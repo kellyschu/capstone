@@ -29,7 +29,8 @@ h2 {
         border-radius: 25px;
         width: 98%;
         margin: 0 auto;
-        height: 44rem;
+        height: fit-content;
+        min-height: 38rem;
         h1 {
             font-size: 1.9rem;
             text-transform: uppercase;
@@ -41,10 +42,6 @@ h2 {
             color: $secondary-cloud;
         }
     }
-}
-
-iframe {
-    padding: 2rem;
 }
 
 
@@ -77,4 +74,16 @@ iframe {
     color: $secondary-cloud;
     appearance: none;
     cursor: pointer; 
+}
+.display-flex__inline {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $secondary-cloud;
+    font-size: 1.25rem;
+    padding-right: .75rem;
+    span {
+        font-size: 1.7rem;
+        margin-left: 1.25rem;
+    }
 }
