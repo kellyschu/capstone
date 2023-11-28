@@ -31,7 +31,7 @@ function MostLovedPage() {
 
     return (
         <section className="page__main">
-            <h1>Most Loved Page</h1>
+            <h1>Most loved episodes</h1>
             <div className="episode-card__container">
                 <EpisodeCard episodes={filteredEpisodes.slice(0, 10)} />
             </div>

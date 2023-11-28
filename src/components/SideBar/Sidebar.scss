@@ -23,6 +23,7 @@
                 color: #363636 !important;
                 cursor: pointer;
                 span {
+                    text-shadow: none;
                     fill: currentColor;
                     color: black;
                 }
@@ -37,18 +38,24 @@
                     fill: currentColor;
                     color: $primary-blue;
                     font-size: 3rem;
+                    padding-left: 1rem;
                     padding-right: 0;
+                    align-self: end;
+                    text-shadow: -5px 2px 3px $background-graphite;
                 }
             }
         }
     }
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: -.02rem;
     }
     h1 {
             color: $supporting-blue;
             letter-spacing: -.03rem;
             margin-bottom: 0;
+            text-shadow: -3px 3px 5px $background-graphite;
         }
 
 }
@@ -56,6 +63,8 @@
 span {
     padding: 0 1.5rem;
     fill: currentColor;
-    color: whitesmoke;
+    color: $secondary-cloud;
+    align-self: center;
+    text-shadow: -3px 3px 2px $background-graphite;
 }
 

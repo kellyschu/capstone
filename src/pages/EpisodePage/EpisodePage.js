@@ -77,7 +77,7 @@ function EpisodePage({userId}) {
                             favorite_border
                         </span>
                         <span
-                            className="material-icons-sharp"
+                            className="material-icons-sharp button__clicked"
                             style={{ cursor: 'pointer', display: isLiked ? 'inline' : 'none' }}
                             onClick={toggleLike}>
                             favorite
@@ -92,7 +92,7 @@ function EpisodePage({userId}) {
                             bookmark_border
                         </span>
                         <span
-                            className="material-icons-sharp"
+                            className="material-icons-sharp button__clicked"
                             style={{ cursor: 'pointer', display: isSaved ? 'inline' : 'none' }}
                             onClick={toggleSave}>
                             bookmark

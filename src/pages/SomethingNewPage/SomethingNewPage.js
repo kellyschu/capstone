@@ -24,7 +24,7 @@ function SomethingNewPage() {
 
     return (
         <section className="page__main">
-            <h1>Something New Page</h1>
+            <h1>episodes you might like</h1>
             <div className="episode-card__container">
                 <EpisodeCard episodes={episodes} />
             </div>

@@ -9,6 +9,7 @@
     height: 5rem;
     padding-bottom: 11rem;
     h4 {
+        text-shadow: 5px 5px 10px $background-graphite;
         margin: 0;
         padding: .5rem 0 .25rem 1.25rem;
         font-size: 1.75rem;
@@ -44,9 +45,13 @@
         font-weight: 600;
         background-color: $supporting-blue;
         color: $background-graphite;
+        text-shadow: -.4px -.25px 1px $background-grey;
+
         &:hover {
-            background-color: #6cb3e6d1; 
+            background-color: #6cb3e6f6; 
             color: $secondary-cloud;
+            text-shadow: 1px 1px 5px $background-graphite;
+            margin: 1.1rem -.1rem 0 0 ;
             cursor: pointer;
         }
     }

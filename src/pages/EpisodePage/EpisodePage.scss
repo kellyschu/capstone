@@ -48,6 +48,7 @@ iframe {
         margin-top: 2rem;
         min-width: 23rem;
         max-width: 28rem;
+        text-shadow: -5px 5px 5px #242424;
         h4 {
             margin: 0;
             padding: .5rem 0 .25rem .5rem;
@@ -66,5 +67,10 @@ iframe {
             line-height: 1.5rem;
             color: $secondary-cloud;
         }
+    }
+}
+.button {
+    &__clicked {
+        color: $supporting-green;
     }
 }

@@ -15,6 +15,7 @@ function SelectCategoryPage() {
             try {
                 const response = await axios.get(`http://localhost:8002/api/episodes/category/${category}`);
                 setCategoryEpisodes(response.data);
+                console.log(response.data);
             } catch (error) {
                 console.error('Error fetching episodes:', error);
             }
@@ -25,9 +26,22 @@ function SelectCategoryPage() {
     const getCardColorClass = (index) => {
         return index % 3 === 0 ? 'grey' : index % 3 === 1 ? 'white' : 'blue';
     };
+                        
+    
 
     return (
         <section className="page__main">
+                        <h1>
+                            {category === '1' && 'Business & Entrepreneurship '}
+                            {category === '2' && 'Technology '}
+                            {category === '3' && 'Health & wellness '}
+                            {category === '4' && 'Sports '}
+                            {category === '5' && 'Arts & Entertainment '}
+                            {category === '6' && 'News & Politics '}
+                            {category === '7' && 'True Crime '}
+                            {category === '8' && 'Comedy '}
+                            Podcasts
+                        </h1>
             <div className="episode-card__container">
             {categoryEpisodes ? (
                 Object.values(categoryEpisodes).map((episode, index) => (
