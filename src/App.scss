@@ -5,9 +5,8 @@
 
 body {
     background-color: $background-graphite;
-    font-weight: 100;
     // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    color: $secondary-cloud;
+    // color: $secondary-cloud;
     font-family: "Open Sans", sans-serif;
 }
 .app-flex {
@@ -18,39 +17,73 @@ h2 {
 }
 .page {
     &__display-flex {
+        //FOR RIGHT SIDE PAGE
         display: flex;
         flex-direction: column;
         width: 97%;
         margin: 0 auto;
     }
     &__main {
+        //FOR BOTTOM RIGHT ONLY
         background-color: $background-grey;
         border-radius: 25px;
         width: 98%;
         margin: 0 auto;
+        height: 44rem;
     }
 }
 
 .card__container {
-
-    display: flex;
-    flex-direction: column;
-    overflow-x: scroll;
-    display: inline-flex;
-    width: 98%;
-    margin: 0 auto;  
-    height: 22rem;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    // scrollbar-track-color: antiquewhite;
-    scrollbar-color: antiquewhite;
-    scrollbar-width: thin;
-    font-size: 1.5rem;
+    // display: flex;
+    // flex-direction: column;
+    // overflow-x: scroll;
+    // display: inline-flex;
+    // width: 98%;
+    // margin: 0 auto;  
+    // height: 22rem;
+    // text-decoration: none;
+    // scroll-behavior: smooth;
+    // // scrollbar-track-color: antiquewhite;
+    // scrollbar-color: antiquewhite;
+    // scrollbar-width: thin;
+    // font-size: 1.5rem;
     h3 {
-        margin: 1rem 0 0 1rem;
+        // margin: 1rem 0 0 1rem;
     }
 
 }
-iframe {
-    padding: 2rem;
+// iframe {
+//     padding: 2rem;
+// }
+
+
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 98%;
+    margin: 0 auto;
+    height: 5.5rem;
+    color: $secondary-cloud;
+    &__user-id {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 15rem;
+        background-color: $background-grey;
+        border-radius: 10px;
+    }
+}
+.dropdown {
+    width: 10rem;
+    height: 3rem;
+    margin: 0  0 0.25rem 0;
+    background-color: $background-grey;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    color: $secondary-cloud;
+    appearance: none;
+    cursor: pointer; 
 }

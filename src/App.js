@@ -12,7 +12,6 @@ import YourLibraryPage from "./pages/YourLibraryPage/YourLibraryPage"
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './components/Header/Header.scss';
 import { useNavigate } from 'react-router-dom';
 import SelectCategoryPage from './pages/SelectCategoryPage/SelectCategoryPage';
 
@@ -29,7 +28,7 @@ function App() {
             const selectedUserId = users.find(user => user.first_name === selectedUserName)?.id;
             setSelectedUser(selectedUserName);
             setSelectedUserId(selectedUserId);
-            navigate(`/mylibrary/${selectedUserId}`);
+            // navigate(`/mylibrary/${selectedUserId}`);
         };
     
         useEffect(() => {
@@ -69,7 +68,7 @@ function App() {
                         </div>
                         </div>
                     <Routes>
-                    <Route path="/episode/:id" element={<EpisodePage />} />
+                    <Route path="/episode/:id" element={<EpisodePage userId={selectedUserId} />} />
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/mylibrary/:id" element={<YourLibraryPage />} />

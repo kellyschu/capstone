@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import './EpisodePage.scss'
 import CommentForm from '../../components/CommentForm/CommentForm';
 
-function EpisodePage() {
+function EpisodePage({userId}) {
     const [episodeComments, setEpisodeComments] = useState([]);
     const { id } = useParams();
     const [episodeData, setEpisodeData] = useState({});
@@ -39,11 +39,10 @@ function EpisodePage() {
                         src={`https://open.spotify.com/embed/episode/${episodeData.id}?utm_source=generator&theme=0`}
                         width="92%"
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        frameBorder="0" 
                         loading="lazy"
                         height="352" 
                     ></iframe>
-                            <CommentForm />
+                            <CommentForm episodeId={episodeData.id} userId={userId} />
                 {episodeComments.length > 0 ? (
                     episodeComments.map((item) => (
                         <div key={item.id}>
