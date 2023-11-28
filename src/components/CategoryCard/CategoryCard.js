@@ -9,6 +9,16 @@ function CategoryCard() {
             <div className="category-card__container">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
                     <NavLink key={index} style= { { textDecoration: 'none' }} className="category-card" to={`/categories/${index}`}>
+                        <span class="material-icons-sharp">
+                            {index === 1 && 'business'}
+                            {index === 2 && 'devices'}
+                            {index === 3 && 'local_hospital'}
+                            {index === 4 && 'sports_basketball'}
+                            {index === 5 && 'theater_comedy'}
+                            {index === 6 && 'article'}
+                            {index === 7 && 'emoji_people'}
+                            {index === 8 && 'emoji_emotions'}
+                        </span>
                         <h3>
                             {index === 1 && 'Business & Entrepreneurship'}
                             {index === 2 && 'Technology'}

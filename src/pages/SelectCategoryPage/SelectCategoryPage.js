@@ -1,4 +1,5 @@
 import "./SelectCategoryPage.scss";
+import '@material-design-icons/font/sharp.css'
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -27,13 +28,12 @@ function SelectCategoryPage() {
 
     return (
         <section className="page__main">
-            <div className="card__container">
-
             <div className="episode-card__container">
             {categoryEpisodes ? (
                 Object.values(categoryEpisodes).map((episode, index) => (
                     <NavLink to={`/episode/${episode.id}`} style= { { textDecoration: 'none' }}  key={episode.id}>
                         <div className={`episode-card ${getCardColorClass(index)}`}>
+                        <span class="material-icons-sharp">podcasts</span>
                         <h3 className="episode-card__title">{episode.title.substring(0, 30)}{episode.title.length > 33 ? '...' : ''}</h3>
                         <p>{episode.channel}</p>
                         </div>
@@ -42,7 +42,6 @@ function SelectCategoryPage() {
             ) : (
                 <p>Loading episodes...</p>
             )}
-            </div>
             </div>
         </section>
     );

@@ -38,6 +38,7 @@ function EpisodePage({userId}) {
                         title={episodeData.title}
                         src={`https://open.spotify.com/embed/episode/${episodeData.id}?utm_source=generator&theme=0`}
                         width="92%"
+                        frameBorder="0"
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy"
                         height="352" 

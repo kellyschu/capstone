@@ -30,31 +30,22 @@ h2 {
         width: 98%;
         margin: 0 auto;
         height: 44rem;
+        h1 {
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            letter-spacing: -.01rem;
+            margin-bottom: -.75rem;
+            margin-top: .75rem;
+            padding-left: 1.5rem;
+            font-weight: 800;
+            color: $secondary-cloud;
+        }
     }
 }
 
-.card__container {
-    // display: flex;
-    // flex-direction: column;
-    // overflow-x: scroll;
-    // display: inline-flex;
-    // width: 98%;
-    // margin: 0 auto;  
-    // height: 22rem;
-    // text-decoration: none;
-    // scroll-behavior: smooth;
-    // // scrollbar-track-color: antiquewhite;
-    // scrollbar-color: antiquewhite;
-    // scrollbar-width: thin;
-    // font-size: 1.5rem;
-    h3 {
-        // margin: 1rem 0 0 1rem;
-    }
-
+iframe {
+    padding: 2rem;
 }
-// iframe {
-//     padding: 2rem;
-// }
 
 
 .header {
