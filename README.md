@@ -1,40 +1,42 @@
 # PodCast Capstone
 
 ## Overview
-A digital platform that enables users to discover, stream, and download audio episodes on various topics. Users can create playlists, and add likes to their favorite episodes. The app provides a diverse range of content, catering to individual interests and preferences.
+A digital platform that enables users to discover, stream, and download audio episodes on various topics. Users add likes, saves and comments to their favorite episodes. The app provides a diverse range of content, catering to individual interests and preferences.
 
 ### Problem
 
-The current platforms contain podcasts but not one app that specializes in the users experience specifically connecting you with content and other users.
+The current platforms host podcasts but there isnt an app that specializes in the users experience specifically connecting you with content and other users experiences.
 
 ### User Profile
 
-Caters to diverse audiences, including anyone on-the-go, commuters, students, and those who prefer content in audible format. This app prioritizes a user-friendly design, user accessibility features, and integrates the abilities to like, share comments and their favorite content with others.
+Caters to diverse audiences, including anyone on-the-go, commuters, students, and those who prefer content in audible format. This app prioritizes a user-friendly design, user accessibility features, and integrates the abilities to like, save, and add comments to their favorite content.
 
 ### Features
 
-User registration, user profiles, content discovery, playback controls.
+Content discovery, content interactions, content engagement
 
 
 ### Tech Stack
 
-Node.js, express.js, MySQL,  Json web tokens, passport.js, React.js 
+Node.js, Express.js, MySQL, React.js, Knex.js
 
 ### APIs
 
-Firebase, spotify API, apple podcasts API
+MySQL Database & episode data from spotify embeds
 
 ### Sitemap
 
-Login page, Homepage with suggestions or recently listened to, a personal page with most recently liked, profile/settings page
-<SearchBar />
-<Header />
-<PodcastList />
-<MediaPlayer />
-<UserAuthentication />
-<UserFavorites />
-<UserSavedPlaylists />
-<Footer />
+Homepage with suggestions, a personal page with commented on episodes
+<EpisodePage />
+<HomePage />
+<SearchPage />
+<YourLibraryPage />
+<CategoriesPage />
+<SelectCategoryPage />
+<MostPlayedPage />
+<MostLovedPage />
+<MostCommentedPage />
+<SomethingNewPage />
 
 ### Mockups
 
@@ -52,4 +54,4 @@ Login page, Homepage with suggestions or recently listened to, a personal page w
 
 ## Nice-to-haves
 
-I would love to set up a subscribe ability, and allow users to listen offline, options for content creators to upload and manage podcasts. Push notifications, subscription management, episode streaming and downloading, social media integration,  in app customer support chat, data storage & encryption, AI driven playlist suggestions based on user preferences and listening history, option for continuous playback. Stripe API for user payment
+I would love to set up a subscribe ability, and allow users to listen offline, options for content creators to upload and manage podcasts. Push notifications, subscription management, episode streaming and downloading, more social media integration,  in app customer support chat, login & encryption, AI driven playlist suggestions based on user preferences and listening history, option for continuous playback. Stripe API for user payment
