@@ -53,8 +53,8 @@ function App() {
         <div className="app-flex">
                     <Sidebar userId={selectedUserId}/>
                         <div className="page__display-flex home-page">
-                        <div className='header'>
-                        <h1>Welcome back, {selectedUser}!</h1>
+                        <div className="header">
+                        <h1>Welcome Back, {selectedUser}!</h1>
                         <div className="header__user-id">
                             <span class="material-icons-sharp">people_alt</span>
                             <select className="dropdown" onChange={handleSelectUser} onBlur={handleFilterUsers}>
@@ -69,7 +69,7 @@ function App() {
                         </div>
                     <Routes>
                     <Route path="/episode/:id" element={<EpisodePage userId={selectedUserId} />} />
-                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/mylibrary/:id" element={<YourLibraryPage />} />
                     <Route path="/categories" element={<CategoriesPage />} />

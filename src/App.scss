@@ -53,10 +53,16 @@ h2 {
     margin: 0 auto;
     height: 5.5rem;
     color: $secondary-cloud;
+    h1 {
+        text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.642);
+        font-size: 2rem;
+        color: $secondary-cloud;
+        font-weight: 600;
+    }
     &__user-id {
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        // align-items: flex-end;
+        // justify-content: center;
         width: 15rem;
         background-color: $background-grey;
         border-radius: 10px;
