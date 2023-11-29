@@ -37,12 +37,11 @@ const CommentForm = ({ episodeId, userId }) => {
             }
         }
         getUser();
-        } , [userId]);
-
+        }, [userId]);
+        
     return (
         <div className="comment-form">
             <h4>Share Your Thoughts</h4>
-            {/* <p>{user[0]?.first_name} {user[0]?.last_name}</p> */}
             <form className='comment-form' onSubmit={handleSubmit}>
                 <label htmlFor='comment'>
                     <textarea

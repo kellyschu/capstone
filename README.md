@@ -55,3 +55,7 @@ Homepage with suggestions, a personal page with commented on episodes
 ## Nice-to-haves
 
 I would love to set up a subscribe ability, and allow users to listen offline, options for content creators to upload and manage podcasts. Push notifications, subscription management, episode streaming and downloading, more social media integration,  in app customer support chat, login & encryption, AI driven playlist suggestions based on user preferences and listening history, option for continuous playback. Stripe API for user payment
+
+## Future Plans
+
+Firebase login, track users liked and saved episodes in mysql, have the Episode page do the axios POST request so the comments display automatically without page refresh, design a mobile layout, track episode plays and display a most played page, add recommended episodes on search page before beginning to search for results, filter episodes from categories prev commented on (eventually based on like and save count), exclude episodes already commented(liked, saved, played) and show the most recent relevant episodes per user, something new page filters out episodes user has already interacted with.
