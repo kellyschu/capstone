@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 
-function MostPlayedPage() {
+function MostSavedPage() {
     const [episodes, setEpisodes] = useState([]);
 
     useEffect(() => {
@@ -37,4 +37,4 @@ function MostPlayedPage() {
         </section>
     );
 }
-export default MostPlayedPage;
+export default MostSavedPage;

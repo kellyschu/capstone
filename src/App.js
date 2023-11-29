@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import EpisodePage from './pages/EpisodePage/EpisodePage';
 import Sidebar from './components/SideBar/Sidebar';
 import MostLovedPage from "./pages/MostLovedPage/MostLovedPage"
-import MostPlayedPage from "./pages/MostPlayedPage/MostPlayedPage"
 import MostCommentedPage from "./pages/MostCommentedPage/MostCommentedPage" 
 import SomethingNewPage from "./pages/SomethingNewPage/SomethingNewPage"
 import HomePage from "./pages/HomePage/HomePage"
@@ -13,6 +12,8 @@ import CategoriesPage from "./pages/CategoriesPage/CategoriesPage"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import SelectCategoryPage from './pages/SelectCategoryPage/SelectCategoryPage';
+import MostSavedPage from './pages/MostSavedPage/MostSavedPage';
+import { useCallback } from 'react';
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -20,7 +21,6 @@ function App() {
     const [selectedUser, setSelectedUser] = useState('');
     const [selectedUserId, setSelectedUserId] = useState('f2cfa14b-9f6c-4ea2-bf9a-b4d187b4b33a');
     const [mainUser, setMainUser] = useState({});
-
 
         const handleSelectUser = (event) => {
             const selectedUserName = event.target.value;
@@ -53,11 +53,11 @@ function App() {
                 console.error('Error filtering users:');            
             }
             };
-    
+
     
     return (
         <div className="app-flex">
-                    <Sidebar userId={selectedUserId}/>
+                    <Sidebar userId={selectedUserId} />
                         <div className="page__display-flex">
                             <div className="header">
                             <h1>Welcome Back, {selectedUser}!</h1>
@@ -80,10 +80,10 @@ function App() {
                     <Route path="/mylibrary/:id" element={<YourLibraryPage />} />
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route path="/categories/:category" element={<SelectCategoryPage />} />
-                    <Route path="/mostplayed" element={<MostPlayedPage />} />
                     <Route path="/mostloved" element={<MostLovedPage />} />
                     <Route path="/mosttalkedabout" element={<MostCommentedPage />} />
                     <Route path="/somethingnew" element={<SomethingNewPage />} />
+                    <Route path="/mostsaved" element={<MostSavedPage />} />
                 </Routes>
             </div>
         </div>
