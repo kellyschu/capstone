@@ -1,7 +1,6 @@
-// iframe {
-//     // width: 50%;
-// }
+
 @use "../src/styles/partials/variables.scss" as *;
+@use "../src/styles/partials/mixins.scss" as *;
 
 body {
     background-color: $background-graphite;
@@ -15,9 +14,14 @@ body {
         //FOR RIGHT SIDE PAGE
         display: flex;
         flex-direction: column;
-        width: 97%;
+        min-width: 460px;
+        max-width: 900px;
         margin: 0 auto;
-    }
+        @include desktop {
+            min-width: 900px;
+            max-width: 1200px;
+        }
+        }
     &__main {
         //FOR BOTTOM RIGHT ONLY
         background-color: $background-grey;
@@ -25,7 +29,11 @@ body {
         width: 98%;
         margin: 0 auto;
         height: fit-content;
-        min-height: 38rem;
+        min-height: 35rem;
+        box-shadow: -5px -5px 8px rgba(24, 24, 30, 0.8);
+        @include desktop {
+            min-height: 38rem;
+        }
         h1 {
             font-size: 1.9rem;
             text-transform: uppercase;
@@ -42,77 +50,58 @@ body {
 
 .header {
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
-    width: 96%;
-    margin: 0 auto;
-    height: 5.5rem;
+    min-width: 440px;
+    max-width: 900px;
+    padding-left: 1rem;
+    @include desktop {
+        min-width: 900px;
+        max-width: 1200px;
+        height: 5.5rem;
+    }
     h1 {
         text-shadow: -2px 2px 3px rgba(19, 19, 33, 0.966);
-        font-size: 2.2rem;
         color: $secondary-cloud;
         font-weight: 800;
+        font-size: 1.4rem;
+        @include desktop {
+            font-size: 2.2rem;
+        }
     }
     &__user-id {
         display: flex;
-        width: 15rem;
+        max-width: 11.35rem;
         align-self: center;
         justify-content: space-apart;
         background-color: $background-grey;
         border-radius: 10px;
+        span {
+            font-size: 1.2rem;
+            padding-left: 1rem;
+        }
+        @include desktop {
+            width: 15rem;
+        }
     }
 }
 .dropdown {
-    width: 10rem;
-    height: 3rem;
-    margin: 0  0 0.25rem 0;
+    height: 2.75rem;
+    margin: .1rem 0 .1rem -.1rem;
     background-color: $background-grey;
     border: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
+    padding-left: .5rem;
     color: $secondary-cloud;
     appearance: none;
+    width: 9rem;
     cursor: pointer; 
 }
-.display-flex {
-    &__inline {
-        display: flex;
-        color: $secondary-cloud;
-        font-size: 1.25rem;
-        padding-right: .75rem;
-        span {
-            font-size: 1.7rem;
-            margin-left: 1.25rem;
-        }
-    }
-    &__column {
-        display: flex;
-        flex-direction: column;
-        color: $secondary-cloud;
-        padding-right: .75rem;
-    }
-}
-.align-items__center {
-    align-items: center;
-    justify-content: flex-end;
 
-}   
-.justify-content {
-    &__flex-end {
-        justify-content: flex-end;
-    }
-    &__space-around {
-        justify-content: space-around;
-    }
-
-    &__flex-end {
-        justify-content: flex-end;
-    }
-}
-
-.border-top {
-    border-top: 1px solid $secondary-cloud;
-    padding-top: 1rem;
-    margin-top: 1rem;
+span {
+    fill: currentColor;
+    color: $secondary-cloud;
+    align-self: center;
+    text-shadow: -3px 3px 2px $background-graphite;
 }
