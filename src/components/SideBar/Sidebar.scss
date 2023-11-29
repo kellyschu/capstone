@@ -2,22 +2,32 @@
 @use "../../styles/partials/mixins" as *;
 
 .sidebar {
-    margin-top: .8rem;
+    span {
+        fill: currentColor;
+        padding: .5rem 1.1rem;
+        color: $secondary-cloud;
+        align-self: center;
+        text-shadow: -3px 3px 2px $background-graphite;
+        @include desktop {
+            padding: 0 1.4rem;
+        }
+    }
     @include tablet {
-    max-width: 19.75rem;
-    display:  flex;
-    flex-direction: column;
+        margin-top: .25rem;
+        max-width: 252px;
+        display:  flex;
+        flex-direction: column;
         &-section {
             margin: .4rem .2rem .5rem .7rem;
             border-radius: 25px;
             background-color: $background-grey;
+            box-shadow: -5px -5px 8px rgba(24, 24, 30, 0.8);
         }
         &-selector {
             display: flex;
             align-items: baseline;
             justify-content: start;
             border-radius: 25px;
-            padding: .25rem;
             &:active, &:hover, &:target {
                 background-color: #f9f9f9;
                 color: #363636 !important;
@@ -28,43 +38,57 @@
                     color: black;
                 }
             }
+            @include desktop {
+                padding: .25rem;
+            }
             &__non-active {
+                color: $supporting-blue;
+                letter-spacing: -.03rem;
+                text-shadow: -3px 3px 5px $background-graphite;
                 display: flex;
                 align-items: baseline;
                 justify-content: start;
-                font-size: 1.4rem;
+                font-size: 1.1rem;
                 padding-right: 1.7rem;
+                @include desktop {
+                    font-size: 1.4rem;
+                }
                 span {
                     fill: currentColor;
                     color: $primary-blue;
-                    font-size: 3rem;
-                    padding-left: 1rem;
                     padding-right: 0;
+                    font-size: 2.25rem;
+                    padding-left: 1rem;
+                    padding-top: 1.4rem;
                     align-self: end;
                     text-shadow: -5px 2px 3px $background-graphite;
+                    @include desktop {
+                        font-size: 3rem;
+                        
+                    }
                 }
             }
         }
-    }
-    h2 {
-        font-size: 1.4rem;
-        font-weight: 400;
-        letter-spacing: -.02rem;
-    }
-    h1 {
-            color: $supporting-blue;
-            letter-spacing: -.03rem;
-            margin-bottom: 0;
-            text-shadow: -3px 3px 5px $background-graphite;
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            padding: .3rem 0;
+            letter-spacing: -.02rem;
+            @include desktop {
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
         }
-
+        h1 {
+            margin-bottom: 0;
+        }
+        
+    }
+    @include desktop {
+        max-width: 450px;
+        margin: 0 auto;
+        margin-top: .8rem;
+    }
 }
 
-span {
-    padding: 0 1.5rem;
-    fill: currentColor;
-    color: $secondary-cloud;
-    align-self: center;
-    text-shadow: -3px 3px 2px $background-graphite;
-}
 

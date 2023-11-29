@@ -5,10 +5,25 @@
     @media (min-width: 768px) {
         @content;
     }
-    }
+}
 
 @mixin desktop {
     @media (min-width: 1280px) {
         @content;
     }
+}
+
+@mixin desktop-large {
+    @media (min-width: 1440px) {
+        @content;
     }
+}
+
+// Mixins
+@mixin displayflex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+
+

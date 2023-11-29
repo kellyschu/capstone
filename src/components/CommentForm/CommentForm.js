@@ -41,21 +41,20 @@ const CommentForm = ({ episodeId, userId }) => {
 
     return (
         <div className="comment-form">
-        <h4>Share Your Thoughts</h4>
-        <p>{user[0]?.first_name} {user[0]?.last_name}</p>
-        <form className='comment-form' onSubmit={handleSubmit}>
-            <label htmlFor='comment'>
-                <input
-                    className='comment-form__input'
-                    type="text"
-                    name="comment"
-                    placeholder="Tell us what you think..."
-                    value={comment}
-                    onChange={(e) => setComment(e.target.value)}
-                />
-            </label>
-            <input className='comment-form__submit' type="submit" value="Post Comment"/>
-        </form>
+            <h4>Share Your Thoughts</h4>
+            <p>{user[0]?.first_name} {user[0]?.last_name}</p>
+            <form className='comment-form' onSubmit={handleSubmit}>
+                <label htmlFor='comment'>
+                    <textarea
+                        className='comment-form__input'
+                        name="comment"
+                        placeholder="Leave a comment on this episode..."
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                    />
+                </label>
+                <input className='comment-form__submit' type="submit" value="Post Comment"/>
+            </form>
         </div>
     );
     };

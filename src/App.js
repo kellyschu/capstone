@@ -58,20 +58,20 @@ function App() {
     return (
         <div className="app-flex">
                     <Sidebar userId={selectedUserId}/>
-                        <div className="page__display-flex home-page">
-                        <div className="header">
-                        <h1>Welcome Back, {selectedUser}!</h1>
-                        <div className="header__user-id">
-                            <span class="material-icons-sharp">people_alt</span>
-                            <select className="dropdown" onChange={handleSelectUser} onBlur={handleFilterUsers}>
-                                <option value="">Switch User</option>
-                                {users.map(user => (
-                                    <option key={user.id} value={user.first_name}>
-                                        {user.first_name} {user.last_name}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
+                        <div className="page__display-flex">
+                            <div className="header">
+                            <h1>Welcome Back, {selectedUser}!</h1>
+                            <div className="header__user-id">
+                                <span class="material-icons-sharp">people_alt</span>
+                                <select className="dropdown" onChange={handleSelectUser} onBlur={handleFilterUsers}>
+                                    <option value="">Switch User</option>
+                                    {users.map(user => (
+                                        <option key={user.id} value={user.first_name}>
+                                            {user.first_name} {user.last_name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
                     <Routes>
                     <Route path="/episode/:id" element={<EpisodePage userId={selectedUserId} />} />
