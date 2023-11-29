@@ -1,0 +1,31 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.random-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-graphite;
+    color: $supporting-blue;
+    border-radius: 13px;
+    width: 21rem;
+    padding: 0 1.5rem;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    &:active, &:hover, &:target {
+        background-color:$supporting-green;
+        color: $background-graphite !important;
+        cursor: pointer;
+        span {
+            fill: currentColor;
+            color: $background-graphite;
+        }
+    }
+    h2 {
+        font-weight: 600;
+    }
+    span {
+        font-size: 2rem;
+        color: $supporting-blue;
+    }
+}

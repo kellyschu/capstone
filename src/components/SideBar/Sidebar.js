@@ -2,6 +2,8 @@ import "./Sidebar.scss";
 import '@material-design-icons/font/sharp.css'
 import { NavLink } from 'react-router-dom';
 
+
+
 function Sidebar({userId}) {
 
     return (
@@ -19,7 +21,6 @@ function Sidebar({userId}) {
                     <span class="material-icons-sharp">search</span>
                     <h2>Search</h2>
                 </NavLink>
-
             </div>
             <div className="sidebar-section">
                 <NavLink exact className="sidebar-selector"  to={`/mylibrary/${userId}`} style={{ textDecoration: 'none', color: "white" }}>
@@ -32,9 +33,9 @@ function Sidebar({userId}) {
                     <span class="material-icons-sharp">dashboard</span>
                     <h2>Categories</h2>
                 </NavLink>
-                <NavLink className="sidebar-selector"  to="/mostplayed" style={{ textDecoration: 'none', color: "white" }}>
-                    <span class="material-icons-sharp">access_time_filled</span>
-                    <h2>Most Played</h2>
+                <NavLink className="sidebar-selector"  to="/mostsaved" style={{ textDecoration: 'none', color: "white" }}>
+                    <span class="material-icons-sharp">bookmark</span>
+                    <h2>Most Saved</h2>
                 </NavLink>
                 <NavLink className="sidebar-selector"  to="/mostloved" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">volunteer_activism</span>

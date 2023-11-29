@@ -1,9 +1,8 @@
-// import "./MostPlayedPage.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
 
-function MostPlayedPage() {
+function MostSavedPage() {
     const [episodes, setEpisodes] = useState([]);
 
     useEffect(() => {
@@ -28,13 +27,23 @@ function MostPlayedPage() {
         return acc;
     }, []).sort((a, b) => b.saves - a.saves);
 
+    const slicedEpisodes1 = filteredEpisodes.slice(0, 6);
+    const slicedEpisodes2 = filteredEpisodes.slice(7, 13);
+    const slicedEpisodes3 = filteredEpisodes.slice(14, 22);
+
     return (
         <section className="page__main">
             <h1>Most Saved Page</h1>
             <div className="episode-card__container">
-                <EpisodeCard episodes={filteredEpisodes} />
+                <EpisodeCard episodes={slicedEpisodes1} />
+            </div>
+            <div className="episode-card__container">
+                <EpisodeCard episodes={slicedEpisodes2} />
+            </div>
+            <div className="episode-card__container">
+                <EpisodeCard episodes={slicedEpisodes3} />
             </div>
         </section>
     );
 }
-export default MostPlayedPage;
+export default MostSavedPage;
