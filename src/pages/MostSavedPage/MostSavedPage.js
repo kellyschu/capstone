@@ -1,4 +1,3 @@
-// import "./MostPlayedPage.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";

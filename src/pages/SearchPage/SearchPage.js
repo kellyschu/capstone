@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EpisodeCard from '../../components/EpisodeCard/EpisodeCard';
+import './SearchPage.scss';
 
 
 function SearchPage() {
@@ -35,15 +36,23 @@ function SearchPage() {
 
     return (
     <section className="page__main">
-        <h1>Search Page</h1>
+        <div className="search__container">
+            <h1>Search Results</h1>
             <input
                 type="text"
-                placeholder="Search episodes"
+                placeholder="Search episodes.."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
+        </div>
         <div className="episode-card__container">            
-            <EpisodeCard episodes={searchResults} />
+            <EpisodeCard episodes={searchResults.slice(0, 5)} />
+        </div>
+        <div className="episode-card__container">            
+        <EpisodeCard episodes={searchResults.slice(6, 10)} />
+        </div>
+        <div className="episode-card__container">            
+        <EpisodeCard episodes={searchResults.slice(11, 15)} />
         </div>
     </section>
     );

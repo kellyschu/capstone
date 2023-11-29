@@ -1,5 +1,4 @@
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard";
-// import "./MostCommentedPage.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
