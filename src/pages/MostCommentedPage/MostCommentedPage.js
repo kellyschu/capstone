@@ -33,7 +33,13 @@ function MostCommentedPage() {
         <section className="page__main">
             <h1>most talked about episodes</h1>
             <div className="episode-card__container">
-                <EpisodeCard episodes={filteredEpisodes} />
+                <EpisodeCard episodes={filteredEpisodes.slice(0, 6)} />
+            </div>
+            <div className="episode-card__container">
+                <EpisodeCard episodes={filteredEpisodes.slice(7, 13)} />
+            </div>
+            <div className="episode-card__container">
+                <EpisodeCard episodes={filteredEpisodes.slice(14, 22)} />
             </div>
         </section>
     );

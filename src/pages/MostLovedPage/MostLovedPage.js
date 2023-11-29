@@ -33,13 +33,13 @@ function MostLovedPage() {
         <section className="page__main">
             <h1>Most loved episodes</h1>
             <div className="episode-card__container">
-                <EpisodeCard episodes={filteredEpisodes.slice(0, 10)} />
+                <EpisodeCard episodes={filteredEpisodes.slice(0, 6)} />
             </div>
             <div className="episode-card__container">
-                <EpisodeCard episodes={filteredEpisodes.slice(11, 21)} />
+                <EpisodeCard episodes={filteredEpisodes.slice(7, 13)} />
             </div>
             <div className="episode-card__container">
-                <EpisodeCard episodes={filteredEpisodes.slice(22, 32)} />
+                <EpisodeCard episodes={filteredEpisodes.slice(14, 22)} />
             </div>
         </section>
     );

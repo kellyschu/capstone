@@ -20,11 +20,21 @@ function YourLibraryPage() {
         getData();
     }, [id]);
 
+    const slicedEpisodes = userData ? userData.slice(0, 18) : [];
+
     return (
         <section className="page__main">
-            <h1>{userData ? `${userData[0].first_name} ${userData[0].last_name} Podcasts` : 'Loading...'}</h1>
+            <h1>{userData ? `${userData[0].first_name}'s Podcasts` : 'Loading...'}</h1>
             <div className="episode-card__container">
-                <EpisodeCard episodes={userData}/>
+                <EpisodeCard episodes={slicedEpisodes.slice(0, 5)} />
+            </div>
+
+            <div className="episode-card__container">
+                <EpisodeCard episodes={slicedEpisodes.slice(6, 12)} />
+            </div>
+
+            <div className="episode-card__container">
+                <EpisodeCard episodes={slicedEpisodes.slice(12, 18)} />
             </div>
         </section>
     );
