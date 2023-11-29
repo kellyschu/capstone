@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import './EpisodePage.scss'
 import CommentForm from '../../components/CommentForm/CommentForm';
 
-function EpisodePage({userId}) {
+function EpisodePage({userName, userId}) {
     const [episodeComments, setEpisodeComments] = useState([]);
     const { id } = useParams();
     const [episodeData, setEpisodeData] = useState({});
@@ -102,7 +102,7 @@ function EpisodePage({userId}) {
             </section>
             <section className="content">
                 <div className="content__comments">
-                    <CommentForm episodeId={episodeData.id} userId={userId} />
+                    <CommentForm episodeId={episodeData.id} userId={userId} userName={userName}/>
                     <div className="content__comments--data">
                         {episodeComments.length > 0 ? (
                             episodeComments.map((item) => (

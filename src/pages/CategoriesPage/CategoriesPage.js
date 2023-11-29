@@ -24,7 +24,9 @@ function CategoriesPage() {
 
     return (
         <section className="page__main">
+            <span className="material-icons-sharp">collections</span>
             <h1>Categories Page</h1>
+
             {Object.keys(episodes).length === 0 ? (
                 <p>Categories loading...</p>
             ) : (

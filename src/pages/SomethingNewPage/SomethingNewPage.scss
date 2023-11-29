@@ -9,16 +9,20 @@
     color: $supporting-blue;
     border-radius: 13px;
     width: 21rem;
-    padding: 0 1.5rem;
+    padding: 0rem 1.5rem;
     margin: 1rem auto;
     margin-bottom: 0;
-    &:active, &:hover, &:target {
+    transition: background-color .25s;
+    height: 4rem;
+    cursor: pointer;
+    &:hover {
         background-color:$supporting-green;
-        color: $background-graphite !important;
-        cursor: pointer;
+        color: $background-graphite;
+        transition-duration: .5s;
         span {
             fill: currentColor;
             color: $background-graphite;
+            text-shadow: none;
         }
     }
     h2 {

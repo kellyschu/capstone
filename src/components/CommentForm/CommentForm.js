@@ -2,7 +2,7 @@ import './CommentForm.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CommentForm = ({ episodeId, userId }) => {
+const CommentForm = ({ episodeId, userId, userName }) => {
     const [comment, setComment] = useState('');
     const [user, setUser] = useState({});
 
@@ -41,7 +41,8 @@ const CommentForm = ({ episodeId, userId }) => {
         
     return (
         <div className="comment-form">
-            <h4>Share Your Thoughts</h4>
+            <h4> <b> Share Your Thoughts</b> <i style={{ color: '#C5F687' }} >{userName}!</i> </h4>
+
             <form className='comment-form' onSubmit={handleSubmit}>
                 <label htmlFor='comment'>
                     <textarea

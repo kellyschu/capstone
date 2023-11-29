@@ -7,25 +7,30 @@ import { useState, useEffect } from "react";
 function SomethingNewPage() {
     const [episodes, setEpisodes] = useState([]);
 
-    const getEpisodes = async () => {
+    const fetchEpisodes = async () => {
         try {
             const response = await axios.get('http://localhost:8002/api/episodes');
             const shuffledEpisodes = [...response.data].sort(() => Math.random() - 0.5);
             const selectedEpisodes = shuffledEpisodes.slice(0, 16);
             setEpisodes(selectedEpisodes);
-        } catch (error) {
+            
+            } catch (error) {
             console.error('Error fetching episodes:', error);
-        }
-    }
-
-    useEffect(() => {
-        getEpisodes();
-    }, []);
+            }
+        };
+        
+        useEffect(() => {
+            fetchEpisodes();
+        }, []);
 
     return (
         <section className="page__main">
-            <div className="random-button" onClick={getEpisodes}>
-                <span className="material-icons-sharp">autorenew</span>
+            <div className="random-button" onClick={fetchEpisodes}>
+                {/* <span className="material-icons-sharp">all_inclusive</span> */}
+                <span className="material-icons-sharp">equalizer</span>
+                {/* <span className="material-icons-sharp">keyboard_double_arrow_right</span> */}
+                {/* <span className="material-icons-sharp">autorenew</span> */}
+
                 <h2>Show Me Something New</h2>
             </div>
             <div className="episode-card__container">

@@ -2,22 +2,20 @@ import "./Sidebar.scss";
 import '@material-design-icons/font/sharp.css'
 import { NavLink } from 'react-router-dom';
 
-
-
 function Sidebar({userId}) {
 
     return (
         <section className="sidebar">
             <div className="sidebar-section">
-                <NavLink className="sidebar-selector__non-active" to="/" style={{ textDecoration: 'none' }}>
+                <NavLink prefetch className="sidebar-selector__non-active" to="/" style={{ textDecoration: 'none' }}>
                     <span class="material-icons-sharp">mic</span>
                     <h1>PODSTREAM</h1>
                 </NavLink>
-                <NavLink exact className="sidebar-selector" to="/" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink prefetch className="sidebar-selector" to="/" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">home</span>
                     <h2>Home</h2>
                 </NavLink>
-                <NavLink exact className="sidebar-selector" to="/search" style={{ textDecoration: 'none', color: "white" }}>
+                <NavLink  prefetch className="sidebar-selector" to="/search" style={{ textDecoration: 'none', color: "white" }}>
                     <span class="material-icons-sharp">search</span>
                     <h2>Search</h2>
                 </NavLink>

@@ -2,29 +2,27 @@
 @use "../../styles/partials/mixins" as *;
 
 .comment-form {
+    background-color: $background-graphite;
+    border-radius: 13px;
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding-top: 2.25rem;
-    height: 5rem;
-    padding-bottom: 14rem;
-    margin: 0 auto;
+    padding: 2.5rem 1.2rem;
+    height: 17.25rem;
+    margin: 2rem auto;
     @include desktop {
-        padding-bottom: 15.5rem;
-        padding-top: 1.5rem;
-        align-items: flex-start;
+        margin: 1.5rem;
+        padding: 2.25rem .75rem;
     }
     h4 {
         text-shadow: 5px 5px 10px $background-graphite;
         margin: 0 auto;
-        font-weight: 800;
+        font-weight: 600;
         letter-spacing: -.01rem;
-        color: $secondary-cloud;
+        color: $supporting-blue;
         font-size: 1.5rem;
         @include desktop {
-            padding: .5rem 0 .1rem .25rem;
             font-size: 1.75rem;
-            margin: 0;
         }
     }
     p {
@@ -49,8 +47,9 @@
         font-size: .9rem;
         font-weight: 600;
         padding: .75rem;
+        margin-top: -.5rem;
         @include desktop {
-            width: 23rem;
+            width: 22rem;
         }
     }
     &__submit {
