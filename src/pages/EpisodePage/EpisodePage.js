@@ -106,7 +106,7 @@ function EpisodePage({userId}) {
                     <div className="content__comments--data">
                         {episodeComments.length > 0 ? (
                             episodeComments.map((item) => (
-                                <div key={item.id}>
+                                <div className="data" key={item.id}>
                                     <div className="content__comments--top-row">
                                         <h5>{item.first_name} {item.last_name}</h5>
                                         <p>{new Date(item.timestamp).toLocaleDateString()}</p>

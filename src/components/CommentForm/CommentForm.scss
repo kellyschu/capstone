@@ -10,7 +10,7 @@
     padding-bottom: 14rem;
     margin: 0 auto;
     @include desktop {
-        padding-bottom: 17rem;
+        padding-bottom: 15.5rem;
         padding-top: 1.5rem;
         align-items: flex-start;
     }
@@ -49,6 +49,9 @@
         font-size: .9rem;
         font-weight: 600;
         padding: .75rem;
+        @include desktop {
+            width: 23rem;
+        }
     }
     &__submit {
         margin-top: .75rem;
