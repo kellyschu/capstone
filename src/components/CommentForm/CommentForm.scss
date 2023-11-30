@@ -11,15 +11,16 @@
     height: 17.25rem;
     margin: 2rem auto;
     @include desktop {
-        margin: 1.5rem;
-        padding: 2.25rem .75rem;
-    }
+        height: 18rem;
+        min-width: 20rem;
+        max-width: 40rem;
+        padding: 2.25rem 1.75rem;
+        }
     h4 {
         text-shadow: 5px 5px 10px $background-graphite;
         margin: 0 auto;
         font-weight: 600;
         letter-spacing: -.01rem;
-        color: $supporting-blue;
         font-size: 1.5rem;
         @include desktop {
             font-size: 1.75rem;
@@ -39,17 +40,18 @@
         }
     }
     textarea {
-        border: none;
-        border-radius: 7px;
+        border-radius: 8px;
+        background-color: $secondary-cloud;
         width: 19rem;
         height: 6rem;
-        font-family: open sans;
-        font-size: .9rem;
-        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: .95rem;
+        font-weight: 400;
         padding: .75rem;
         margin-top: -.5rem;
         @include desktop {
-            width: 22rem;
+            min-width: 20rem;
+            max-width: 40rem;
         }
     }
     &__submit {

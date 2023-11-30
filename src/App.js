@@ -64,9 +64,6 @@ function App() {
         const handleFilterUsers = () => {
             const filtered = users.filter(user => user.first_name === selectedUsername);
             setFilteredUsers(filtered);
-            console.log('filtered', filtered);
-            console.log('filtered first ', filtered[0].first_name);
-
             if (filtered.length > 0) {
                 setMainUser(filtered[0]);
             } else {

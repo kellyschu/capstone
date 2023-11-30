@@ -14,8 +14,8 @@ function EpisodeCard({ key, episodes }) {
                     <NavLink to={`/episode/${episode.id}`} style= { { textDecoration: 'none' }} key={key}>
                         <div className={`episode-card ${getCardColorClass(index)}`}>
                         <span class="material-icons-sharp">podcasts</span>
-                        <h3 className="episode-card__title">{episode.title.substring(0, 30)}{episode.title.length > 33 ? '...' : ''}</h3>
-                        <p>{episode.channel}</p>
+                        <h3 className="episode-card__title">{episode.title.substring(0, 31)}{episode.title.length > 35 ? '...' : ''}</h3>
+                        <p>{episode.channel.substring(0, 24)}{episode.channel.length > 25 ? '...' : ''}</p>
                         </div>
                     </NavLink>
                 ))

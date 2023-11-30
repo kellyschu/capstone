@@ -33,7 +33,7 @@ function MostSavedPage() {
 
     return (
         <section className="page__main">
-            <h1>Most Saved Page</h1>
+            <h1>Most Saved Episodes</h1>
             <div className="episode-card__container">
                 <EpisodeCard episodes={slicedEpisodes1} />
             </div>

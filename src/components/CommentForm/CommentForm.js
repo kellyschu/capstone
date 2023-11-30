@@ -41,14 +41,14 @@ const CommentForm = ({ episodeId, userId, userName }) => {
         
     return (
         <div className="comment-form">
-            <h4> <b> Share Your Thoughts</b> <i style={{ color: '#C5F687' }} >{userName}!</i> </h4>
+            <h4>Share Your Thoughts <b style={{ color: '#abd8f6' }}> {userName}!</b> </h4>
 
             <form className='comment-form' onSubmit={handleSubmit}>
                 <label htmlFor='comment'>
                     <textarea
                         className='comment-form__input'
                         name="comment"
-                        placeholder="Leave a comment on this episode..."
+                        placeholder="Leave a comment..."
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
                     />

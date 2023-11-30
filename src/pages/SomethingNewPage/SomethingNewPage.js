@@ -26,11 +26,7 @@ function SomethingNewPage() {
     return (
         <section className="page__main">
             <div className="random-button" onClick={fetchEpisodes}>
-                {/* <span className="material-icons-sharp">all_inclusive</span> */}
                 <span className="material-icons-sharp">equalizer</span>
-                {/* <span className="material-icons-sharp">keyboard_double_arrow_right</span> */}
-                {/* <span className="material-icons-sharp">autorenew</span> */}
-
                 <h2>Show Me Something New</h2>
             </div>
             <div className="episode-card__container">

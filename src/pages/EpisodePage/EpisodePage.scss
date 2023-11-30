@@ -71,6 +71,7 @@ iframe {
                 letter-spacing: .01rem;
                 @include desktop {
                     font-size: .9rem;
+                    padding-right: 1rem;
                 }
             }
             @include desktop {
@@ -189,12 +190,12 @@ iframe {
     }   
 }
 .data {
-    background-color: $secondary-slate; 
-    margin: 1rem auto;
+    margin: .75rem auto;
     border-radius: 13px;
     width: 95%;
-    box-shadow: 2px 2px 8px $background-graphite;
+    box-shadow: 2px 2px 12px $background-graphite;
     @include desktop {
-        width: 100%;
+        min-width: 26rem;
+        max-width: 33rem;
     }
 }
