@@ -1,4 +1,4 @@
-// import "./CategoriesPage.scss";
+import "./CategoriesPage.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
@@ -24,8 +24,7 @@ function CategoriesPage() {
 
     return (
         <section className="page__main">
-            <h1>Categories Page</h1>
-            {Object.keys(episodes).length === 0 ? (
+            <h1>Categories Page</h1>            {Object.keys(episodes).length === 0 ? (
                 <p>Categories loading...</p>
             ) : (
                 <CategoryCard episodes={episodes} />

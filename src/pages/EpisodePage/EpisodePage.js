@@ -3,9 +3,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './EpisodePage.scss'
+// const API_URL = process.env.REACT_APP_API_URL;
+// import { NavLink } from "react-router-dom";
+// process.env.REACT_APP_API_URL
 import CommentForm from '../../components/CommentForm/CommentForm';
 
-function EpisodePage({userId}) {
+function EpisodePage({userName, userId}) {
+    const API_URL = 'http://localhost:8002';
     const [episodeComments, setEpisodeComments] = useState([]);
     const { id } = useParams();
     const [episodeData, setEpisodeData] = useState({});
@@ -13,24 +17,28 @@ function EpisodePage({userId}) {
     const [isSaved, setIsSaved] = useState(false);
 
     useEffect(() => {
-        async function getEpisode() {
+        async function getEpisodeComments() {
             try {
-                const response = await axios.get(`http://localhost:8002/api/episodes/${id}/comments`);
+                const response = await axios.get(`${API_URL}/api/episodes/${id}/comments`);
                 setEpisodeComments(response.data);
                 } catch (error) {
                     console.error('Error fetching episode:', error);
                 }
             }
-            getEpisode();
+            getEpisodeComments();
         }, [id]);
 
     
     useEffect(() => {
-        async function getEpisodes() {
-            const response = await axios.get(`http://localhost:8002/api/episodes/${id}`);
-            setEpisodeData(response.data);
-        }
-        getEpisodes();
+        async function getEpisode() {
+            try {
+                const response = await axios.get(`${API_URL}/api/episodes/${id}`);
+                setEpisodeData(response.data);
+                } catch (error) {
+                    console.error('Error fetching episode:', error);
+                }
+            }
+            getEpisode();
         } , [id]);
 
         const toggleLike = async () => {
@@ -39,7 +47,7 @@ function EpisodePage({userId}) {
                 ...prevData,
                 likes: isLiked ? prevData.likes - 1 : prevData.likes + 1,
             }));
-            await axios.patch(`http://localhost:8002/api/episodes/${id}`, {
+            await axios.patch(`${API_URL}/api/episodes/${id}`, {
                 likes: isLiked ? episodeData.likes - 1 : episodeData.likes + 1,
             }); 
         }
@@ -50,7 +58,7 @@ function EpisodePage({userId}) {
                 ...prevData,
                 saves: isSaved ? prevData.saves - 1 : prevData.saves + 1,
             }));
-            await axios.patch(`http://localhost:8002/api/episodes/${id}`, {
+            await axios.patch(`${API_URL}/api/episodes/${id}`, {
                 saves: isSaved ? episodeData.saves - 1 : episodeData.saves + 1,
             }); 
         }
@@ -102,7 +110,7 @@ function EpisodePage({userId}) {
             </section>
             <section className="content">
                 <div className="content__comments">
-                    <CommentForm episodeId={episodeData.id} userId={userId} />
+                    <CommentForm episodeId={episodeData.id} userId={userId} userName={userName}/>
                     <div className="content__comments--data">
                         {episodeComments.length > 0 ? (
                             episodeComments.map((item) => (

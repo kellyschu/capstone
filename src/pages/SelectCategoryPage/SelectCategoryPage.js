@@ -48,8 +48,8 @@ function SelectCategoryPage() {
                     <NavLink to={`/episode/${episode.id}`} style= { { textDecoration: 'none' }}  key={episode.id}>
                         <div className={`episode-card ${getCardColorClass(index)}`}>
                         <span class="material-icons-sharp">podcasts</span>
-                        <h3 className="episode-card__title">{episode.title.substring(0, 30)}{episode.title.length > 33 ? '...' : ''}</h3>
-                        <p>{episode.channel}</p>
+                        <h3 className="episode-card__title">{episode.title.substring(0, 31)}{episode.title.length > 35 ? '...' : ''}</h3>
+                        <p>{episode.channel.substring(0, 24)}{episode.channel.length > 24 ? '...' : ''}</p>
                         </div>
                     </NavLink>
                 ))
