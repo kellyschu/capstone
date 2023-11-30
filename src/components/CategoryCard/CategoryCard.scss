@@ -28,9 +28,14 @@
         padding-left: 1%;
         top: 21%;
     }
-    height: 15rem;
     border-radius: 10px;
-    width: 12rem;
+    height: 14rem;
+    width: 11rem;
+    @include tablet {
+        height: 15rem;
+        width: 12rem;
+    }
+
     font-size: .8rem;
     margin: .25rem 1.3rem 0 0;
     display: flex;

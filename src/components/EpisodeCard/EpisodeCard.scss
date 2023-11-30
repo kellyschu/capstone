@@ -21,35 +21,50 @@
     }
 }
 .episode-card {
-    height: 15rem;
-    border-radius: 10px;
-    width: 12.5rem;
-    font-size: .8rem;
-    margin: .25rem 1.3rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    border-radius: 10px;
+    height: 12rem;
+    width: 10rem;
+    margin: .2rem 1rem 0 0;
     padding: .5rem;
     &:hover {
         background-color: rgba(89, 113, 166, 0.5);
         cursor: pointer;
         color: white;
-    
+    }
+    @include tablet {
+        height: 15rem;
+        width: 12.5rem;
+        font-size: .8rem;
+        margin: .25rem 1.3rem 0 0;
     }
     p {
-        font-size: .9rem;
+        font-size: .75rem;
         margin: 0;
-        padding: .5rem ;
-        font-weight: 800;
+        padding: .25rem ;
+        font-weight: 600;
         letter-spacing: -.03rem;
+        @include tablet {
+            font-size: .9rem;
+            padding: .5rem ;
+            font-weight: 800;
+        }
     }
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.05rem;
         letter-spacing: -.05rem;
         line-height: 1.45rem;
         margin: 0;
-        padding: 0  0 0 .5rem;
-        font-weight: 400;
+        padding: 0  0 0 .1rem;
+        font-weight: 600;
+        @include tablet {
+            font-size: 1.3rem;
+            letter-spacing: -.05rem;
+            padding: 0  0 0 .5rem;
+            font-weight: 400;
+        }
     }
 
     &__container {
@@ -58,10 +73,14 @@
         padding: 1.75rem 0 1.25rem .75rem;
         position: relative;
         span {
-            font-size: 5.5rem;
             position: absolute;
-            padding-left: 1%;
-            top: 26.5%;
+            font-size: 4.75rem;
+            top: 26%;
+            @include tablet {
+                top: 26.5%;
+                padding-left: 1%;
+                font-size: 5.5rem;
+            }
         }
     }
 }

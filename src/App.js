@@ -23,7 +23,6 @@ function App() {
     //  filteredUsers is the specefic users obj. selected from dropdown
     const [filteredUsers, setFilteredUsers] = useState({});
 
-
     //  Selected UserFirstName to display in header
     const [selectedUsername, setSelectedUsername] = useState('');
 
