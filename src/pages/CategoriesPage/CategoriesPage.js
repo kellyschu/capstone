@@ -24,7 +24,8 @@ function CategoriesPage() {
 
     return (
         <section className="page__main">
-            <h1>Categories Page</h1>            {Object.keys(episodes).length === 0 ? (
+            <h1 style={{ textTransform: 'none' }}>Choose a Category:</h1>            
+            {Object.keys(episodes).length === 0 ? (
                 <p>Categories loading...</p>
             ) : (
                 <CategoryCard episodes={episodes} />

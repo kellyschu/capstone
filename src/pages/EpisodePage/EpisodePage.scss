@@ -20,9 +20,12 @@ iframe {
     }
     @include desktop {
         display: flex;
-        justify-content: space-around;
+        margin: 0 auto;
+        // align-items: center;
+        // justify-content: end;
         font-size: 1.25rem;
-        padding-right: .75rem;
+        // padding-right: .75rem;
+
     }
     &__comments {
         @include tablet {
@@ -33,7 +36,8 @@ iframe {
             padding-bottom: 3rem;
         }
         @include desktop {
-            margin-top: 2rem;
+            margin: 0 auto;
+            margin-top: 1.75rem;
         }
         &--data {
             margin: 1rem auto;

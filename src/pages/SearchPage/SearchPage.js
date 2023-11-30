@@ -36,8 +36,14 @@ function SearchPage() {
 
     return (
     <section className="page__main">
-        <div className="search__container">
-            <h1>Search Results</h1>
+            <div className="search__container">
+                <div className="search__header">
+                    <h1>Search Results:</h1>
+                    <p className={searchTerm.length > 15 ? 'scrolling-text' : ''}>
+                    {searchTerm}
+                    </p>
+                </div>
+            
             <input
                 type="text"
                 placeholder="Search episodes.."
