@@ -15,6 +15,9 @@ import MostSavedPage from './pages/MostSavedPage/MostSavedPage';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
 import MostLovedPage from './pages/MostLovedPage/MostLovedPage';
+import SignIn from './components/auth/SignIn';
+import AuthDetails from './components/auth/AuthDetails';
+import SignUp from './components/auth/SignUp';
 
 function App() {
     //  all users from database on pageload
@@ -76,7 +79,8 @@ function App() {
         <div className="app-flex" loading="">
                     <Sidebar userId={selectedUserId} />
                         <div className="page__display-flex">
-                            {isHome && (
+                            <AuthDetails />
+                            {/* {isHome && (
                             <div className="header">
                                 <h1>Welcome Back, {selectedUsername}!</h1>
                                 <div className="header__user-id">
@@ -106,8 +110,10 @@ function App() {
                                     </select>     
                                 </div>
                             </div>
-                            )}
+                            )} */}
                     <Routes>
+                    <Route path="/signin" element={<SignIn />} />
+                    <Route path="/signup" element={<SignUp />} />
                     <Route path="/episode/:id" element={<EpisodePage userId={selectedUserId} userName={selectedUsername}/>} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />} />
