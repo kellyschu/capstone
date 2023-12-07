@@ -1,4 +1,4 @@
-import "./CategoriesPage.scss";
+// import "./CategoriesPage.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
