@@ -77,41 +77,10 @@ function App() {
     
     return (
         <div className="app-flex" loading="">
-                    <Sidebar userId={selectedUserId} />
-                        <div className="page__display-flex">
-                            <AuthDetails />
-                            {/* {isHome && (
-                            <div className="header">
-                                <h1>Welcome Back, {selectedUsername}!</h1>
-                                <div className="header__user-id">
-                                    <span class="material-icons-sharp">people_alt</span>
-                                    <select className="dropdown" onChange={handleSelectUser} onBlur={handleFilterUsers}>
-                                        <option value="">Switch User</option>
-                                        {users.map(user => (
-                                            <option key={user.id} value={user.first_name}>
-                                                {user.first_name} {user.last_name}
-                                            </option>
-                                        ))}
-                                    </select>     
-                                </div>
-                            </div>
-                            )}
-                        {!isHome && (
-                            <div className="header__float-right">
-                                <div className="header__user-id">
-                                    <span class="material-icons-sharp">people_alt</span>
-                                    <select className="dropdown" onChange={handleSelectUser} onBlur={handleFilterUsers}>
-                                        <option value="">Switch User</option>
-                                        {users.map(user => (
-                                            <option key={user.id} value={user.first_name}>
-                                                {user.first_name} {user.last_name}
-                                            </option>
-                                        ))}
-                                    </select>     
-                                </div>
-                            </div>
-                            )} */}
-                    <Routes>
+            <Sidebar userId={selectedUserId} />
+            <div className="page__display-flex">
+                <AuthDetails />
+                <Routes>
                     <Route path="/signin" element={<SignIn />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/episode/:id" element={<EpisodePage userId={selectedUserId} userName={selectedUsername}/>} />

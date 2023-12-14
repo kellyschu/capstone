@@ -16,12 +16,11 @@ function SomethingNewPage() {
             
             } catch (error) {
             console.error('Error fetching episodes:', error);
-            }
-        };
-        
-        useEffect(() => {
+        }
+    };
+    useEffect(() => {
             fetchEpisodes();
-        }, []);
+                }, []);
 
     return (
         <section className="page__main">

@@ -15,7 +15,6 @@ function SelectCategoryPage() {
             try {
                 const response = await axios.get(`http://localhost:8002/api/episodes/category/${category}`);
                 setCategoryEpisodes(response.data);
-                console.log(response.data);
             } catch (error) {
                 console.error('Error fetching episodes:', error);
             }
