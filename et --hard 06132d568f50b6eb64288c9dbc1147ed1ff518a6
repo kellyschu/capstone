@@ -1,0 +1,590 @@
+[33mcommit ca174c3370049842563c3a8cffafad1c4c97c489[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Dec 7 13:38:00 2023 -0500
+
+    added firebase auth
+
+[33mcommit 9cedab1fc59e8cb89ac464c3401748bcbeaf9f1e[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Dec 6 21:25:42 2023 -0500
+
+    added firebase auth
+
+[33mcommit 06132d568f50b6eb64288c9dbc1147ed1ff518a6[m[33m ([m[1;32mMyLibr[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 30 11:19:46 2023 -0500
+
+    search bar and category page styling
+
+[33mcommit cb377186d3c769d4e183baba9776f80ab360e824[m
+Merge: bceaf63 c50875b
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 30 01:00:29 2023 -0500
+
+    Merge pull request #26 from kellyschu/PageStyling
+    
+    Page styling
+
+[33mcommit c50875b2bb84f129674d5719c2173d1098a0ee77[m[33m ([m[1;31morigin/PageStyling[m[33m, [m[1;32mPageStyling[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 30 00:59:32 2023 -0500
+
+    final minor styling changes
+
+[33mcommit c3415334bd6fc58e064101ebcbe4e4118bf9e3f3[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 29 15:18:28 2023 -0500
+
+    background styling to comment form and episode description
+
+[33mcommit bceaf637c73cd23660c32bfdbb7a2c35a27e436d[m[33m ([m[1;31morigin/develop[m[33m)[m
+Merge: 1ca20c9 4f68f14
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 29 01:56:34 2023 -0500
+
+    Merge pull request #25 from kellyschu/PageStyling
+    
+    Page styling and layout updated
+
+[33mcommit 4f68f143c1e6591ae9513ec994ea4236dc7337e3[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 29 01:54:33 2023 -0500
+
+    updated search page layout
+
+[33mcommit c808831e088a60b4b0979cf102c86e7056c26a79[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 29 01:31:51 2023 -0500
+
+    sliced episodes cards into containers to fill the pages
+
+[33mcommit 8675409ead04abda4e83fed0e72c52e91dc97935[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 29 01:20:11 2023 -0500
+
+    added a get random episode button, added slicing to episode card for layout
+
+[33mcommit 4a65cc0c113a228d1f170763b17d3e3726f72ddf[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 29 00:20:54 2023 -0500
+
+    added future plans to readme file
+
+[33mcommit 92aa73ad863b8c917840dca1053535fd80bb1156[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 23:56:55 2023 -0500
+
+    styling to like/save button and restyled comments
+
+[33mcommit 1ca20c99fbc72861ea5c69ec13b02045d4d62230[m
+Merge: 625f095 f74681e
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 23:22:06 2023 -0500
+
+    Merge pull request #24 from kellyschu/PageStyling
+    
+    Page Styling between breakpoints
+
+[33mcommit f74681ebcee9bd94f16efcda1687241aead7c133[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 23:20:50 2023 -0500
+
+    styling between breakpoints for the sidebar, episode page and comment form
+
+[33mcommit 625f0951a40e672c831580ba035e5af9d1f7ee39[m
+Merge: 6f60b52 cb2fb24
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 16:25:33 2023 -0500
+
+    Merge pull request #23 from kellyschu/PageStyling
+    
+    Page styling
+
+[33mcommit cb2fb247b791879847f012658333d7a6ea6ad3f9[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 16:24:38 2023 -0500
+
+    updated page headers
+
+[33mcommit 87a8e1320d44a686323706cddd3dc4224d9e82a4[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 15:35:04 2023 -0500
+
+    made user index 0 be the default user on pageload
+
+[33mcommit 80dc498f10d71f727c0031b7658f25afe33143b3[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 11:38:27 2023 -0500
+
+    add text-shadow to give depth to the app
+
+[33mcommit 6f60b52f5d36661cf46076503c54473680d7572c[m
+Merge: 68cfe35 704f9f6
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 01:14:43 2023 -0500
+
+    Merge pull request #22 from kellyschu/PageStyling
+    
+    Updated Episode page layout
+
+[33mcommit 704f9f6769e3ed210435fa3cf3651a455a80146f[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 01:13:47 2023 -0500
+
+    styling of the episode page and page headers
+
+[33mcommit d25d7516e0cc048ba87a0989ddb5eda87c77d89f[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 28 00:39:48 2023 -0500
+
+    styling to the episode content and comment section
+
+[33mcommit e9852e7ecc2815878f2620fc3ade8c65c3ea2d60[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 23:31:56 2023 -0500
+
+    styling for the comment form on the episode page
+
+[33mcommit 68cfe35e1a0de9d7b7b5c816a1ac8cebab2fcde7[m
+Merge: 45aefd6 b41114f
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 22:59:34 2023 -0500
+
+    Merge pull request #21 from kellyschu/PageStyling
+    
+    updated readme file
+
+[33mcommit b41114f29e7993d0f9838d7b0bf8cf17e306b279[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 22:58:01 2023 -0500
+
+    updated readme file
+
+[33mcommit 45aefd6b1556d2fd4757609ce1ec8e47b849f769[m
+Merge: 63291a1 574f639
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 22:49:49 2023 -0500
+
+    Merge pull request #20 from kellyschu/PageStyling
+    
+    PATCH routing for likes & saves
+
+[33mcommit 574f639f9e7dfd5301681e8b4148bde3eafd8224[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 22:47:30 2023 -0500
+
+    routing to increment and decrement episode likes and saves
+
+[33mcommit 63291a1d1bb802afc0f65fb07be5c89bcafc183c[m
+Merge: fb684a4 052949a
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 21:44:59 2023 -0500
+
+    Merge pull request #19 from kellyschu/PageStyling
+    
+    Added imgs to episode and category cards
+
+[33mcommit 052949a431f7c70f958d7ed442a197be12dba68b[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 21:43:31 2023 -0500
+
+    added imgs to episode cards
+
+[33mcommit 45412348083206fd9bacbb17d357ef80b17d0466[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 21:40:26 2023 -0500
+
+    added imgs for category cards
+
+[33mcommit 47f81eaf00fabb9bfedfe2f67f32b7ec6963e674[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 21:31:40 2023 -0500
+
+    added img to episode cards
+
+[33mcommit fb684a48129770ee6709860fa3f25e9308ba9bab[m
+Merge: a358d29 b344e49
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 20:44:26 2023 -0500
+
+    Merge pull request #18 from kellyschu/PageStyling
+    
+    Scss styling to cards, added hover effect
+
+[33mcommit b344e49b4d4cff070d5fe98330e3d5d7114cdc8a[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 20:42:17 2023 -0500
+
+    hover and styling to episode and category cards
+
+[33mcommit a358d29b1d0dad7cd8aabdf610852041e21f2e71[m
+Merge: 11b12f4 9b459f6
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 19:40:03 2023 -0500
+
+    Merge pull request #17 from kellyschu/PageStyling
+    
+    Page styling
+
+[33mcommit 9b459f6f550d53d274f1f0e1bb4de1b06ead5744[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 19:38:59 2023 -0500
+
+    corrected the styling to the episodes via category page
+
+[33mcommit 66dd4dd285d2a72c3721ab7e81ae2a2a08455dd3[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 19:10:47 2023 -0500
+
+    updated sidebar styling
+
+[33mcommit dde79b2cb2711eb11ecdbc36863cfaf6faef73a3[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 18:16:04 2023 -0500
+
+    episodes by id post comments by user id to the database
+
+[33mcommit 11b12f456df26e0016ff7dae64c71422c069c6f1[m
+Merge: 4fd3f03 f43ce7d
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 16:55:17 2023 -0500
+
+    Merge pull request #16 from kellyschu/PageStyling
+    
+    added alternate coloring to episodes
+
+[33mcommit f43ce7d8aa68ff41a8b86b43488fae323f18e2df[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 16:03:35 2023 -0500
+
+    added alternate coloring to episodes
+
+[33mcommit 4fd3f0315c7ad4556125e459f84f0b886280c903[m
+Merge: 6453b01 52bee16
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 15:36:49 2023 -0500
+
+    Merge branch 'main' of https://github.com/kellyschu/capstone
+
+[33mcommit 6453b01844e6263f6e9f2e933bb97c94a9541554[m[33m ([m[1;32mPageRouting[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 15:34:39 2023 -0500
+
+    removed consolelog
+
+[33mcommit cf44029f3f4b0878d759f34df2476918fe1e1cfa[m[33m ([m[1;31morigin/PageRouting[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 15:28:47 2023 -0500
+
+    cleaned console.logs and comments from code
+
+[33mcommit 52fc451fbe557ddbc4dfad07f5ad806f8450f74d[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 15:23:27 2023 -0500
+
+    minor styling of episode cards
+
+[33mcommit 0aadd99053c221dd7d876c28759744ae3e6511ab[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 15:07:10 2023 -0500
+
+    added usestate to handle search episode results
+
+[33mcommit 9c5dc3b48d5ec45ed41c94dc605e2acbdbf7ca6b[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 14:08:51 2023 -0500
+
+    routed library page to matched the user selected
+
+[33mcommit 55015fb220a325aea9c81fd8981fddf6749d02e3[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 11:48:11 2023 -0500
+
+    filtered episodes for most loved and most commented pages
+
+[33mcommit d5fdf63203e524f0d5bd155744660a0c1944c763[m[33m ([m[1;31morigin/CommentForm[m[33m, [m[1;32mCommentForm[m[33m)[m
+Merge: b388c40 70e1037
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 11:05:20 2023 -0500
+
+    Merge branch 'main' into CommentForm
+
+[33mcommit 52bee16ffd9c573ebe6bebaabd24ccc7bf41ff42[m
+Merge: f2786d9 b388c40
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 11:04:41 2023 -0500
+
+    Merge pull request #13 from kellyschu/CommentForm
+    
+    Routing for pages
+
+[33mcommit b388c40e1b5eac69a992cbffde75e0d6499a7ba6[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 10:58:29 2023 -0500
+
+    logic for something new page
+
+[33mcommit f2786d98ffaaf3598ab58702156c53a92cb1973e[m
+Merge: 70e1037 1e75415
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 01:55:17 2023 -0500
+
+    Merge pull request #12 from kellyschu/CommentForm
+    
+    Routing on the front end
+
+[33mcommit 1e7541504bc448bfab5af26418213927cfe21916[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Mon Nov 27 01:54:01 2023 -0500
+
+    routing thus far
+
+[33mcommit 7a1f14f74b955cce0e0b12b5c739ece8c88a1556[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sun Nov 26 19:42:25 2023 -0500
+
+    updated the header dynamically display users
+
+[33mcommit 70e10379bc513f2d2d2f32eecdf7f07e06d7cddf[m
+Merge: 6872c52 5855018
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sun Nov 26 18:10:06 2023 -0500
+
+    Merge pull request #11 from kellyschu/CommentForm
+    
+    Episode Id from Params to display associated Comments
+
+[33mcommit 58550181b67884cd9ad5437a97a4de8f85c091c6[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sun Nov 26 18:05:41 2023 -0500
+
+    map function to display user comments based on episode id from params
+
+[33mcommit 6872c5212b4b0350562aaa3e8984aadfa285e94b[m
+Merge: 838848f ed34a0e
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Fri Nov 24 18:14:09 2023 -0500
+
+    Merge pull request #10 from kellyschu/NavLinkSideBar
+    
+    basic styling to the episode cards
+
+[33mcommit ed34a0ea44c0366d1cd769ca4017953442895711[m[33m ([m[1;31morigin/NavLinkSideBar[m[33m, [m[1;32mNavLinkSideBar[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Fri Nov 24 18:13:21 2023 -0500
+
+    basic styling to the episode cards
+
+[33mcommit 838848f9fa1a2364d7459669d807b076816de1c1[m
+Merge: 287b339 eca41e1
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Fri Nov 24 17:20:45 2023 -0500
+
+    Merge pull request #9 from kellyschu/PageLayout
+    
+    added Link and icon to sidebar component
+
+[33mcommit eca41e1d5d5a8b02e4da7bc22e7a0652a959fe29[m[33m ([m[1;31morigin/PageLayout[m[33m, [m[1;32mPageLayout[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Fri Nov 24 17:19:30 2023 -0500
+
+    added Link and icon to sidebar component
+
+[33mcommit 287b339211ab66e309b32b1f9acc41201650dcd6[m
+Merge: b45b982 c494fe7
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 23:41:12 2023 -0500
+
+    Merge pull request #8 from kellyschu/PageLayout
+    
+    Page layout
+
+[33mcommit c494fe7a874d3cc5a40f24e99662f1c4a0ccadaa[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 23:40:29 2023 -0500
+
+    modified iframe style for episode page
+
+[33mcommit 043a4a59a80107e74199e6c0ae13e2eaba25f60e[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 23:03:22 2023 -0500
+
+    basic styling to the main sidebar component
+
+[33mcommit caa50b8ef2b21ed514f6e96edf89a67eedb3136a[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 22:05:54 2023 -0500
+
+    added footer links and centered
+
+[33mcommit b45b9826c017f57a8ca0672b93eb6b03b3aa1be2[m
+Merge: dd6e9d6 3d143e5
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 10:48:44 2023 -0500
+
+    Merge branch 'develop'
+
+[33mcommit 3d143e5d1a85ce98599eeb4d352a814e923ba3eb[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 10:44:26 2023 -0500
+
+    added an axios call to get the episode from params
+
+[33mcommit dd6e9d628c585af5c5dbb0d80b6a7ca62469b029[m
+Merge: fb10330 094e0b2
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 10:14:34 2023 -0500
+
+    Merge pull request #7 from kellyschu/develop
+    
+    replaced the conflicting text with the updated mysql col name
+
+[33mcommit 094e0b225663b508ca434a1c456766fa3f67e669[m[33m ([m[1;32mEpisodePage[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Thu Nov 23 10:13:49 2023 -0500
+
+    replaced the conflicting text with the updated mysql col name
+
+[33mcommit fb10330f2146e3d501aa3a2e06706555b8513dbb[m
+Merge: 53ff821 d86e2bc
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 22 16:41:35 2023 -0500
+
+    Merge pull request #6 from kellyschu/connect-to-backend
+    
+    connected to backend and routed episode page, pulled comment data for…
+
+[33mcommit d86e2bc7a0d4d59c00a72dea96737fe52efe8b95[m[33m ([m[1;31morigin/connect-to-backend[m[33m, [m[1;32mconnect-to-backend[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 22 16:37:41 2023 -0500
+
+    connected to backend and routed episode page, pulled comment data for specific episode
+
+[33mcommit 53ff8211681dbf6683abe61d86b249ed13e49263[m
+Merge: aea4593 fed9166
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sat Nov 18 17:09:29 2023 -0500
+
+    Merge pull request #5 from kellyschu/FileStructure
+    
+    Updates to Folder Structure-Pages & Route Paths
+
+[33mcommit fed91666b748be2062e2b23d9ebb836f914945bd[m[33m ([m[1;31morigin/FileStructure[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sat Nov 18 17:07:53 2023 -0500
+
+    added page folders js files and named route paths
+
+[33mcommit aea4593cbc415eb14e5213a1bfa5be7189d410cd[m
+Merge: 0ea50c2 c4c0e8a
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sat Nov 18 15:57:18 2023 -0500
+
+    Merge pull request #4 from kellyschu/Main
+    
+    added additional mockups for the overall page layout and design
+
+[33mcommit c4c0e8a19001acdb5a33c34093bdb00b26a0bc97[m[33m ([m[1;31morigin/EpisodeCard[m[33m, [m[1;32mEpisodeCard[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sat Nov 18 15:54:45 2023 -0500
+
+    added additional mockups for the overall page layout and design
+
+[33mcommit 0ea50c28cf294474c2f0afd19115c293605d644e[m
+Merge: 5b7564a 789afe0
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sat Nov 18 14:12:39 2023 -0500
+
+    Merge pull request #3 from kellyschu/develop
+    
+    Develop
+
+[33mcommit 789afe05fb31857b6e0722604f41e01ad7868a65[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Sat Nov 18 14:08:58 2023 -0500
+
+    updated home page mockup design
+
+[33mcommit 38a8cc990e7a65f835539f1efb20d4321200996c[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 23:02:50 2023 -0500
+
+    first commit
+
+[33mcommit 86c9534ac8baf558ba13105e5357375d764cf950[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 19:21:50 2023 -0500
+
+    minor addition to file structure
+
+[33mcommit f22be1072290c35cef1a2e675a6c0925c7bf4e33[m[33m ([m[1;31morigin/HomePage[m[33m, [m[1;32mHomePage[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 19:20:12 2023 -0500
+
+    added components needed to home page
+
+[33mcommit 57d1753c4396bbfb94447375892d1ce14ebbf03f[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 19:15:06 2023 -0500
+
+    created basic outline for homepage and routed on app.js
+
+[33mcommit 2d89ef70eb55ee6a7dcc02bedcaabf02fd5ff3a9[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 19:09:21 2023 -0500
+
+    created inital file structure for capstone project
+
+[33mcommit 7ba3ea9a67fc41ed75566ffca3933dac90b19211[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 17:19:37 2023 -0500
+
+    added mockup to readme
+
+[33mcommit cd1a281a716c87cc387f784a7ad427deba96732d[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 17:16:57 2023 -0500
+
+    added mockup to readme
+
+[33mcommit 5b7564a951e442f5634d2b5a1ed281e9c507c2e1[m
+Merge: 017203c 28eb50a
+Author: Kelly Schumacher <145580587+kellyschu@users.noreply.github.com>
+Date:   Wed Nov 15 17:15:21 2023 -0500
+
+    Merge pull request #2 from kellyschu/develop
+    
+    added mockup to readme
+
+[33mcommit 28eb50aa198816e4db59525c6b0114a0b7fc323b[m[33m ([m[1;31morigin/READmeFile[m[33m, [m[1;32mREADmeFile[m[33m)[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 17:14:24 2023 -0500
+
+    added mockup to readme
+
+[33mcommit 017203c380b5504ebb54ecea90e667e5a6d4a21c[m
+Merge: 1ca0654 fd83d90
+Author: Kelly Schumacher <145580587+kellyschu@users.noreply.github.com>
+Date:   Wed Nov 15 17:09:37 2023 -0500
+
+    Merge pull request #1 from kellyschu/READmeFile
+    
+    added mockup to readme
+
+[33mcommit fd83d909d9c3d315dafcc5a2ddf2e70497fcf0dc[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Wed Nov 15 17:08:06 2023 -0500
+
+    added mockup to readme
+
+[33mcommit 1ca0654a9745d031287cf6b875b215452353de49[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 14 23:19:32 2023 -0500
+
+    commit readme file
+
+[33mcommit 21a1874d883f498bb9b61fb402f62e0db2a128df[m
+Author: Kelly Schumacher <kschumacher93@gmail.com>
+Date:   Tue Nov 14 23:16:12 2023 -0500
+
+    Initialize project using Create React App
